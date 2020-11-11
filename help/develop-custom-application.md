@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service].
 description: Aangepaste toepassingen maken met [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Zorg ervoor dat de [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is g
 
    Lees hier de [hoofdcomponenten van een Firefly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
 
-   De sjabloontoepassing gebruikt onze SDK [voor](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) Asset Compute voor het uploaden, downloaden en ordenen van toepassingsuitvoeringen, zodat ontwikkelaars alleen de aangepaste toepassingslogica hoeven te implementeren. In de `actions/<worker-name>` map is het `index.js` bestand de locatie waar de aangepaste toepassingscode moet worden toegevoegd.
+   De sjabloontoepassing gebruikt onze [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, downloaden en ordenen van toepassingsuitvoeringen, zodat ontwikkelaars alleen de aangepaste toepassingslogica hoeven te implementeren. In de `actions/<worker-name>` map is het `index.js` bestand de locatie waar de aangepaste toepassingscode moet worden toegevoegd.
 
 Zie [voorbeelden van aangepaste toepassingen](#try-sample) voor voorbeelden en ideeën voor aangepaste toepassingen.
 
@@ -82,7 +82,7 @@ Het hulpprogramma voor ontwikkelaars dat wordt gebruikt om aangepaste toepassing
 
 >[!NOTE]
 >
->Dit staat los van de cloudopslag van [!DNL Adobe Experience Manager] als Cloud Service. Het is alleen van toepassing voor het ontwikkelen en testen met het hulpprogramma Asset Compute Developer.
+>Dit staat los van de cloudopslag van [!DNL Adobe Experience Manager] als Cloud Service. Dit geldt alleen voor het ontwikkelen en testen met het Asset compute developer tool.
 
 Zorg ervoor dat u toegang hebt tot een [ondersteunde container](https://github.com/adobe/asset-compute-devtool#prerequisites)voor cloudopslag. Deze container kan door veelvoudige ontwikkelaars over verschillende projecten worden gedeeld zoals nodig.
 
@@ -96,7 +96,13 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Voeg de referenties S3 of Azure Storage toe. U hebt slechts toegang tot één cloudopslagoplossing nodig.
+1. Als de map zich niet rechtstreeks in de hoofdmap van uw Firefly-app `console.json` bevindt, voegt u het absolute pad naar het JSON-bestand voor integratie van de Adobe Developer Console toe. Dit is hetzelfde [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) bestand dat in uw projectwerkruimte wordt gedownload. U kunt ook de opdracht gebruiken in `aio app use <path_to_console_json>` plaats van het pad aan het ENV-bestand toe te voegen.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+   ```
+
+1. Voeg S3 of Azure opslaggeloofsbrieven toe. U hebt slechts toegang tot één cloudopslagoplossing nodig.
 
    ```conf
    # S3 credentials
@@ -113,7 +119,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 
 ## De toepassing uitvoeren {#run-custom-application}
 
-Voordat u de toepassing uitvoert met het Hulpprogramma voor het berekenen van bedrijfsmiddelen, moet u de [referenties](#developer-tool-credentials)op de juiste wijze configureren.
+Alvorens de toepassing met het Hulpmiddel van de Ontwikkelaar van de Asset compute uit te voeren, vorm behoorlijk de [geloofsbrieven](#developer-tool-credentials).
 
 Gebruik de `aio app run` opdracht om de toepassing uit te voeren in het gereedschap Ontwikkelaar. De toepassing implementeert de actie op Adobe I/O Runtime en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
 
@@ -128,7 +134,7 @@ Gebruik de `aio app run` opdracht om de toepassing uit te voeren in het gereedsc
 
 >[!NOTE]
 >
->Gebruik de `--local` markering niet met de `run` opdracht. De functie werkt niet met [!DNL Asset Compute] aangepaste toepassingen en het hulpprogramma Asset Compute Developer. De toepassingen van de douane worden geroepen door [!DNL Asset Compute Service] die tot geen acties kunnen toegang hebben die op de lokale machines van de ontwikkelaar lopen.
+>Gebruik de `--local` markering niet met de `run` opdracht. Het werkt niet met [!DNL Asset Compute] aangepaste toepassingen en het gereedschap Asset compute Developer. De toepassingen van de douane worden geroepen door [!DNL Asset Compute Service] die tot geen acties kunnen toegang hebben die op de lokale machines van de ontwikkelaar lopen.
 
 Zie [hier](test-custom-application.md) hoe u uw toepassing kunt testen en er fouten in kunt opsporen. Wanneer u klaar bent met het ontwikkelen van uw douanetoepassing, [stel uw douanetoepassing](deploy-custom-application.md)op.
 
@@ -208,7 +214,7 @@ De `example-worker-animal-pictures` geeft een aangepaste parameter door [`animal
 
 ## Ondersteuning voor verificatie en autorisatie {#authentication-authorization-support}
 
-Standaard worden aangepaste toepassingen voor middelenberekening geleverd met verificatie- en verificatiecontroles voor probleemtoepassingen. Dit wordt ingeschakeld door de `require-adobe-auth` annotatie in te stellen op `true` in de `manifest.yml`.
+Standaard worden aangepaste toepassingen voor Asset compute geleverd met verificatie- en verificatiecontroles voor probleemtoepassingen. Dit wordt ingeschakeld door de `require-adobe-auth` annotatie in te stellen op `true` in de `manifest.yml`.
 
 ### Andere Adobe-API&#39;s openen {#access-adobe-apis}
 
@@ -272,14 +278,14 @@ Een toepassing wordt uitgevoerd in een container in Adobe I/O Runtime met [grenz
           concurrency: 1
 ```
 
-Wegens de meer uitgebreide verwerking typisch die door de toepassingen van de Compute van Activa wordt gedaan, is het waarschijnlijker dat men deze grenzen voor optimale prestaties (groot genoeg om binaire activa te behandelen) en efficiency (niet verspilend middelen wegens ongebruikt containergeheugen) moet aanpassen.
+Wegens de meer uitgebreide verwerking typisch die door de toepassingen van de Asset compute wordt gedaan, is het waarschijnlijker dat men deze grenzen voor optimale prestaties (groot genoeg om binaire activa te behandelen) en efficiency (niet verspilend middelen wegens ongebruikt containergeheugen) moet aanpassen.
 
 De standaardtime-out voor acties in Runtime is een minuut, maar deze kan worden verhoogd door de `timeout` limiet in milliseconden in te stellen. Verhoog deze tijd als u grotere bestanden wilt verwerken. Houd rekening met de totale tijd die nodig is om de bron te downloaden, het bestand te verwerken en de vertoning te uploaden. Als een handeling uitvalt, d.w.z. de activering niet vóór de opgegeven time-outlimiet retourneert, verwijdert Runtime de container en gebruikt deze niet opnieuw.
 
-De activa verwerken toepassingen door aard neigen om netwerk en schijfIO verbindend te zijn. Het bronbestand moet eerst worden gedownload, de verwerking is vaak IO zwaar en de resulterende uitvoeringen worden opnieuw geüpload.
+De toepassingen van de asset compute door aard neigen om netwerk en schijfIO verbindend te zijn. Het bronbestand moet eerst worden gedownload, de verwerking is vaak IO zwaar en de resulterende uitvoeringen worden opnieuw geüpload.
 
 Het geheugen beschikbaar aan een actiecontainer wordt gespecificeerd door `memorySize` in MB. Momenteel bepaalt dit ook hoeveel toegang van cpu tot de container krijgt, en het belangrijkste is het een zeer belangrijk element van de kosten om Runtime (grotere containers kosten meer) te gebruiken. Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of cpu vereist maar ben voorzichtig om geen middelen te verspillen aangezien groter de containers zijn, lager de algemene productie is.
 
-Bovendien is het mogelijk om handelingsgelijktijdig binnen een container te controleren gebruikend het `concurrency` plaatsen. Dit is het aantal gelijktijdige activeringen dat één container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. Als niet geplaatst, is het gebrek in Runtime 200, dat voor kleinere acties Firefly, maar gewoonlijk te groot voor de toepassingen van de Compute van Activa gezien hun intensievere lokale verwerking en schijfactiviteit groot is. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De SDK voor middelenberekening zorgt ervoor dat de actities worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
+Bovendien is het mogelijk om handelingsgelijktijdig binnen een container te controleren gebruikend het `concurrency` plaatsen. Dit is het aantal gelijktijdige activeringen dat één container (van dezelfde handeling) krijgt. In dit model, is de actiecontainer als server Node.js die veelvoudige gezamenlijke verzoeken, tot die grens ontvangt. Als niet geplaatst, is het gebrek in Runtime 200, dat voor kleinere acties Firefly, maar gewoonlijk te groot voor Asset compute toepassingen gezien hun intensievere lokale verwerking en schijfactiviteit groot is. Sommige toepassingen, afhankelijk van hun implementatie, werken mogelijk ook niet goed met gelijktijdige activiteit. De Asset compute-SDK zorgt ervoor dat de activeringen worden gescheiden door bestanden naar verschillende unieke mappen te schrijven.
 
 Test toepassingen om de optimale getallen voor `concurrency` en `memorySize`. Grotere containers = de hogere geheugengrens kon voor meer gelijktijdige uitvoering toestaan maar kon ook verkwistend voor lager verkeer zijn.
