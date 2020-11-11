@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP-API.'
 description: '[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken.'
 translation-type: tm+mt
-source-git-commit: 18e97e544014933e9910a12bc40246daa445bf4f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2925'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
-Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als Cloud Service de API gebruikt om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Zie [Elementmicroservices en Verwerkingsprofielen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)gebruiken voor meer informatie.
+Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als Cloud Service de API gebruikt om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Zie [Elementmicroservices en Verwerkingsprofielen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)gebruiken voor meer informatie.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Deze vereisen dat het [!DNL Adobe Developer Console] project wordt ingetekend aa
 * Basis
    * bereik: `openid,AdobeID`
 
-* Verwerking van middelen
+* asset compute
    * metareaal: `asset_compute_meta`
    * bereik: `asset_compute,read_organizations`
 
@@ -349,7 +349,7 @@ Alle JSON-reacties (indien aanwezig) bevatten de waarde `requestId` die gelijk i
 
 ## Inschakelen naar naverwerking {#opt-in-to-post-processing}
 
-De SDK [voor](https://github.com/adobe/asset-compute-sdk) Asset Compute ondersteunt een aantal basisopties voor nabewerking van afbeeldingen. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` op het weergaveobject in te stellen op `true`.
+De SDK [van de](https://github.com/adobe/asset-compute-sdk) Asset compute ondersteunt een aantal basisopties voor nabewerking van afbeeldingen. Aangepaste workers kunnen zich expliciet aanmelden bij nabewerking door het veld `postProcess` op het weergaveobject in te stellen op `true`.
 
 De ondersteunde gebruiksgevallen zijn:
 
@@ -362,7 +362,7 @@ De ondersteunde gebruiksgevallen zijn:
 
 ## Watermerkelementen {#add-watermark}
 
-De SDK [voor](https://github.com/adobe/asset-compute-sdk) Asset Compute ondersteunt het toevoegen van een watermerk aan PNG-, JPEG-, TIFF- en GIF-afbeeldingsbestanden. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` object op de vertoning.
+De [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk) ondersteunt het toevoegen van een watermerk aan PNG-, JPEG-, TIFF- en GIF-afbeeldingsbestanden. Het watermerk wordt toegevoegd na de vertoningsinstructies in het `watermark` object op de vertoning.
 
 Watermerken worden uitgevoerd tijdens de nabewerking van de vertoning. Als u elementen van een watermerk wilt voorzien, [gaat de aangepaste worker naar een nabewerking](#opt-in-to-post-processing) door het veld `postProcess` op het weergaveobject in te stellen op `true`. Als de worker niet de optie Weigeren inschakelt, wordt het watermerk niet toegepast, zelfs niet als het watermerkobject is ingesteld op het weergaveobject in de aanvraag.
 
@@ -374,7 +374,7 @@ Dit zijn de beschikbare opties voor de `renditions` array in [/proces](#process-
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | De doelindeling van uitvoeringen kan ook worden gebruikt `text` voor het extraheren van tekst en `xmp` voor het extraheren van XMP metagegevens als XML. Zie [ondersteunde indelingen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt` | `string` | De doelindeling van uitvoeringen kan ook worden gebruikt `text` voor het extraheren van tekst en `xmp` voor het extraheren van XMP metagegevens als XML. Zie [ondersteunde indelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL van een [aangepaste toepassing](develop-custom-application.md). Dit moet een `https://` URL zijn. Als dit veld aanwezig is, wordt de vertoning gemaakt door een aangepaste toepassing. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP-PUT. | `http://w.com/img.jpg` |
 | `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Dit is voor [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [multipart uploadgedrag](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: minimumgrootte voor één onderdeel = url</li><li>`maxPartSize`: de maximumgrootte voor één onderdeel = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -382,7 +382,7 @@ Dit zijn de beschikbare opties voor de `renditions` array in [/proces](#process-
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
 
-Zie [Ondersteunde bestandsindelingen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)voor een lijst met momenteel ondersteunde bestandsindelingen.
+Zie [Ondersteunde bestandsindelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)voor een lijst met momenteel ondersteunde bestandsindelingen.
 
 | Naam | Type | Beschrijving | Voorbeeld |
 |-------------------|----------|-------------|---------|
