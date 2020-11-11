@@ -2,9 +2,9 @@
 title: Begrijp over uitbreiden [!DNL Asset Compute Service].
 description: Wanneer en hoe u [!DNL Asset Compute Service] de functionaliteit kunt uitbreiden voor aangepaste verwerking van elementen.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Inleiding tot uitbreidbaarheid {#introduction-to-extensibilty}
 
-Veel vereisten voor vertoningen, zoals het omzetten in indelingen en het vergroten of verkleinen van afbeeldingen, worden behandeld door Profielen [verwerken [!DNL Experience Manager] als een Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] U kunt deze extensie uitbreiden door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager]. Deze aangepaste toepassingen zijn gebaseerd op de [ondersteunde gebruiksgevallen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Veel vereisten voor vertoningen, zoals het omzetten in indelingen en het vergroten of verkleinen van afbeeldingen, worden behandeld door Profielen [verwerken [!DNL Experience Manager] als een Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] U kunt deze extensie uitbreiden door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in [!DNL Experience Manager]. Deze aangepaste toepassingen zijn gebaseerd op de [ondersteunde gebruiksgevallen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met [!DNL Experience Manager] als Cloud Service.
 
-De aangepaste toepassingen zijn toepassingen zonder hoofd voor [probleemloze](https://github.com/AdobeDocs/project-firefly) projecttoepassingen. Het uitbreiden [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door de [Activa Compute SDK](https://github.com/adobe/asset-compute-sdk) en het de ontwikkelaars van het Project Frefly hulpmiddelen. Dit staat ontwikkelaars toe om zich op bedrijfslogica te concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een Adobe I/O Runtime-handeling zonder normale serverless. Het is één JavaScript-functie Node.js. Het [eenvoudige aangepaste toepassingsvoorbeeld](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert dit.
+De aangepaste toepassingen zijn toepassingen zonder hoofd voor [probleemloze](https://github.com/AdobeDocs/project-firefly) projecttoepassingen. Het uitbreiden [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door de [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) en het Project Frefly ontwikkelt hulpmiddelen. Dit staat ontwikkelaars toe om zich op bedrijfslogica te concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een Adobe I/O Runtime-handeling zonder normale serverless. Het is één JavaScript-functie Node.js. Het [eenvoudige aangepaste toepassingsvoorbeeld](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert dit.
 
 ## Vereisten voor vereisten en voorzieningen {#prerequisites-and-provisioning}
 
