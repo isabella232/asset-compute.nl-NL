@@ -1,8 +1,8 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 2%
 
 ---
@@ -59,4 +59,4 @@ Wij zijn natuurlijk blij met elke bijdrage en zullen uw bijdrage beoordelen als 
 
 ## Aanvullende informatie
 
-Zie de [Gids](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) van de Medewerker van Docs van Adobe voor verdere details over hoe te om het GitHub auteursplatform en de gesteunde syntaxis van de Prijsverlaging te gebruiken.
+Zie de [Gids](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) van de Medewerker van Docs van Adobe voor verdere details over hoe te om het GitHub auteursplatform en de gesteunde syntaxis van de Prijsverlaging te gebruiken.
