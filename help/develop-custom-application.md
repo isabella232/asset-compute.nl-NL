@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service].
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Het hulpprogramma voor ontwikkelaars dat wordt gebruikt om aangepaste toepassing
 
 >[!NOTE]
 >
->Dit staat los van de cloudopslag van [!DNL Adobe Experience Manager] als Cloud Service. Dit geldt alleen voor het ontwikkelen en testen met het Asset compute developer tool.
+>Dit staat los van de cloudopslag van [!DNL Adobe Experience Manager] als [!DNL Cloud Service]. Dit geldt alleen voor het ontwikkelen en testen met het Asset compute developer tool.
 
 Zorg ervoor dat u toegang hebt tot een [ondersteunde container voor cloudopslag](https://github.com/adobe/asset-compute-devtool#prerequisites). Deze container kan door veelvoudige ontwikkelaars over verschillende projecten worden gedeeld zoals nodig.
 
