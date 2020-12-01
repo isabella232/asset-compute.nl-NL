@@ -2,9 +2,9 @@
 title: Stel de ontwikkelomgeving in die vereist is voor  [!DNL Asset Compute Service].
 description: Ontwikkelomgeving ingesteld voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 translation-type: tm+mt
-source-git-commit: 1c2a1dc41296bf26c432c51b5afa20cb07a4c5c5
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Als u een installatie wilt maken waarmee u zich kunt ontwikkelen voor [!DNL Asse
 
 1. Systeembeheerder of ontwikkelaarsrol toegang krijgen tot de Ervaring Organisatie. Dit kan door een Admin van het Systeem in [Admin Console](https://adminconsole.adobe.com/overview) worden geplaatst.
 
-1. Log op [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van dezelfde Adobe Experience Cloud-organisatie als de AEM als integratie van Cloud Servicen. Zie [Consoledocumentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html) voor meer informatie over Adobe Developer Console.
+1. Log op [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van dezelfde Adobe Experience Cloud-organisatie als de AEM als een [!DNL Cloud Service]-integratie. Zie [Consoledocumentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html) voor meer informatie over Adobe Developer Console.
 
 1. [Maak een Firefly-project](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Klik **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project van sjabloon]**. Selecteer Firefly. Het leidt tot een nieuw Vuurwerk Project met twee werkruimten: `Production` en `Stage`. Voeg desgewenst extra werkruimten toe, bijvoorbeeld `Development`.
 
