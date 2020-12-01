@@ -1,6 +1,6 @@
 ---
-title: Aangepaste toepassing testen en [!DNL Asset Compute Service] fouten opsporen.
-description: Aangepaste toepassing testen en [!DNL Asset Compute Service] fouten opsporen.
+title: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
+description: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
 translation-type: tm+mt
 source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
 workflow-type: tm+mt
@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Een aangepaste toepassing testen en fouten hierin opsporen {#test-debug-custom-worker}
+# Een aangepaste toepassing testen en fouten opsporen {#test-debug-custom-worker}
 
 ## Eenheidstests uitvoeren voor een aangepaste toepassing {#test-custom-worker}
 
@@ -26,17 +26,17 @@ To run tests for a custom application, run `adobe-asset-compute test-worker` com
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
 
-Dit stelt een kader van de de testtest van de douaneeenheid voor de toepassingsacties van de Compute van Activa in het project in werking zoals hieronder beschreven. Deze wordt door een configuratie in het `package.json` bestand gekoppeld. Het is ook mogelijk om JavaScript eenheidstests zoals Jest te hebben. `aio app test` voert beide uit.
+Dit stelt een kader van de douanetest van de eenheid voor de acties van de Asset compute toepassing in het project in werking zoals hieronder beschreven. Het wordt omhoog vastgemaakt door een configuratie in het `package.json` dossier. Het is ook mogelijk om JavaScript eenheidstests zoals Jest te hebben. `aio app test` voert beide uit.
 
-De [insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule voor de insteekmodule](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency) voor de ontwikkeling wordt ingesloten in de aangepaste toepassing, zodat deze niet hoeft te worden geïnstalleerd op systemen voor samenstellen/testen.
+De [air-cli-plugin-asset-compute](https://github.com/adobe/aio-cli-plugin-asset-compute#install-as-local-devdependency)-plug-in is ingesloten als ontwikkelingsafhankelijkheid in de aangepaste toepassing, zodat deze niet hoeft te worden geïnstalleerd op build-/testsystemen.
 
-### Testframework voor toepassingseenheid {#unit-test-framework}
+### Testframework toepassingseenheid {#unit-test-framework}
 
-Met het testframework voor de toepassing Asset Compute kunt u toepassingen testen zonder code te schrijven. Het is afhankelijk van het principe van de bron naar het weergavebestand van toepassingen. Er moet een bepaalde bestands- en mapstructuur worden ingesteld om testcase te definiëren met testbronbestanden, optionele parameters, verwachte uitvoeringen en aangepaste validatiescripts. Standaard worden de uitvoeringen vergeleken voor de gelijkheid van bytes. Bovendien kunnen externe HTTP-services eenvoudig worden gecontroleerd met behulp van eenvoudige JSON-bestanden.
+Met het testframework voor de eenheid van de Asset compute-toepassing kunt u toepassingen testen zonder code te schrijven. Het is afhankelijk van het principe van de bron naar het weergavebestand van toepassingen. Er moet een bepaalde bestands- en mapstructuur worden ingesteld om testcase te definiëren met testbronbestanden, optionele parameters, verwachte uitvoeringen en aangepaste validatiescripts. Standaard worden de uitvoeringen vergeleken voor de gelijkheid van bytes. Bovendien kunnen externe HTTP-services eenvoudig worden gecontroleerd met behulp van eenvoudige JSON-bestanden.
 
 ### Tests toevoegen {#add-tests}
 
-Tests worden verwacht in de `test` map op het hoofdniveau van het AIO-project. De testgevallen voor elke toepassing moeten in het pad staan `test/asset-compute/<worker-name>`, met één map voor elk testgeval:
+Tests worden verwacht in de map `test` op het hoofdniveau van het AIO-project. De testgevallen voor elke toepassing moeten zich in het pad `test/asset-compute/<worker-name>` bevinden, met één map voor elk testgeval:
 
 ```yaml
 action/
@@ -63,13 +63,13 @@ test/
             mock-console.adobe.io.json
 ```
 
-Bekijk [voorbeelden van aangepaste toepassingen](https://github.com/adobe/asset-compute-example-workers/) . Hieronder vindt u een gedetailleerde referentie.
+Bekijk [voorbeeld douanetoepassingen](https://github.com/adobe/asset-compute-example-workers/) voor sommige voorbeelden. Hieronder vindt u een gedetailleerde referentie.
 
-### Uitvoer testen {#test-output}
+### Uitvoer {#test-output} testen
 
-De gedetailleerde testuitvoer, inclusief de logboeken van de aangepaste toepassing, wordt beschikbaar gesteld in de `build` map in de hoofdmap van de Firefly-app, zoals wordt getoond in de `aio app test` uitvoer.
+De gedetailleerde testuitvoer, inclusief de logboeken van de aangepaste toepassing, wordt beschikbaar gesteld in de map `build` in de hoofdmap van de Firefly-app, zoals wordt getoond in de `aio app test`-uitvoer.
 
-### Externe diensten koppelen {#mock-external-services}
+### Externe services koppelen {#mock-external-services}
 
 Het is mogelijk om externe de dienstvraag in uw acties te controleren door `mock-<HOST_NAME>.json` dossiers in uw testgevallen te bepalen, waar HOST_NAME de gastheer is u zou willen controleren. Een geval van het voorbeeldgebruik is een toepassing die een afzonderlijke vraag aan S3 maakt. De nieuwe teststructuur ziet er als volgt uit:
 
@@ -85,7 +85,7 @@ test/
         mock-<HOST_NAME2>.json
 ```
 
-Het mock-bestand is een http-reactie met JSON-indeling. Zie [deze documentatie](https://www.mock-server.com/mock_server/creating_expectations.html)voor meer informatie. Als er meerdere hostnamen zijn om te controleren, definieert u meerdere `mock-<mocked-host>.json` bestanden. Hieronder ziet u een voorbeeldmodelbestand voor de `google.com` naam `mock-google.com.json`:
+Het mock-bestand is een http-reactie met JSON-indeling. Zie [deze documentatie](https://www.mock-server.com/mock_server/creating_expectations.html) voor meer informatie. Als er veelvoudige gastheernamen aan mock zijn, bepaal veelvoudige `mock-<mocked-host>.json` dossiers. Hieronder ziet u een voorbeeldmodelbestand voor `google.com` met de naam `mock-google.com.json`:
 
 ```json
 [{
@@ -102,11 +102,11 @@ Het mock-bestand is een http-reactie met JSON-indeling. Zie [deze documentatie](
 }]
 ```
 
-Het voorbeeld `worker-animal-pictures` bevat een [modelbestand](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) voor de Wikimedia-service waarmee het communiceert.
+Het voorbeeld `worker-animal-pictures` bevat een [mock-bestand](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/test/asset-compute/worker-animal-pictures/simple-test/mock-upload.wikimedia.org.json) voor de Wikimedia-service waarmee het communiceert.
 
-#### Bestanden delen over testgevallen {#share-files-across-test-cases}
+#### Bestanden delen in testgevallen {#share-files-across-test-cases}
 
-U wordt aangeraden relatieve symmetrieën te gebruiken als u `file.*`of `params.json` `validate` scripts in meerdere tests deelt. Ze worden ondersteund met git. Geef uw gedeelde bestanden een unieke naam, omdat u mogelijk andere bestanden hebt. In het onderstaande voorbeeld mengen en vergelijken de tests een paar gedeelde bestanden en hun eigen bestanden:
+Het wordt aangeraden relatieve symmetrieën te gebruiken als u scripts `file.*`, `params.json` of `validate` over meerdere tests deelt. Ze worden ondersteund met git. Geef uw gedeelde bestanden een unieke naam, omdat u mogelijk andere bestanden hebt. In het onderstaande voorbeeld mengen en vergelijken de tests een paar gedeelde bestanden en hun eigen bestanden:
 
 ```json
 tests/
@@ -136,7 +136,7 @@ tests/
 
 ### Verwachte fouten testen {#test-unexpected-errors}
 
-De testgevallen van de fout zouden geen verwacht `rendition.*` dossier moeten bevatten en zouden de verwachte `errorReason` binnen het `params.json` dossier moeten bepalen.
+Fouttestgevallen mogen geen verwacht `rendition.*`-bestand bevatten en moeten de verwachte `errorReason` in het `params.json`-bestand definiëren.
 
 Fout bij testen hoofdletterstructuur:
 
@@ -155,26 +155,26 @@ Parameterbestand met reden van fout:
 }
 ```
 
-Zie volledige lijst en beschrijving van de [oorzaak](https://github.com/adobe/asset-compute-commons#error-reasons)van fouten bij het berekenen van bedrijfsmiddelen.
+Zie volledige lijst en beschrijving van [Asset compute foutenredenen](https://github.com/adobe/asset-compute-commons#error-reasons).
 
 ## Fouten opsporen in een aangepaste toepassing {#debug-custom-worker}
 
 De volgende stappen tonen hoe u uw douanetoepassing kunt zuiveren gebruikend de Code van Visual Studio. Het staat voor het zien van levende logboeken, raakbreekpunten en stap door code evenals het levende opnieuw laden van lokale codeveranderingen na elke activering toe.
 
-Veel van deze stappen worden gewoonlijk geautomatiseerd door `aio` uit de doos, zie sectie het Zuiveren van de Toepassing in de [Firefly documentatie](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Tot nu toe bevatten de onderstaande stappen een tijdelijke oplossing.
+Veel van deze stappen worden gewoonlijk geautomatiseerd door `aio` uit de doos, zie sectie het Zuiveren van de Toepassing in [Firefly documentatie](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Tot nu toe bevatten de onderstaande stappen een tijdelijke oplossing.
 
-1. Installeer de recentste [wskdebug](https://github.com/apache/openwhisk-wskdebug) van GitHub en facultatieve [ingrok](https://www.npmjs.com/package/ngrok).
+1. Installeer de nieuwste [wskdebug](https://github.com/apache/openwhisk-wskdebug) van GitHub en de optionele [ngrok](https://www.npmjs.com/package/ngrok).
 
    ```shell
    npm install -g @openwhisk/wskdebug
    npm install -g ngrok --unsafe-perm=true
    ```
 
-1. Voeg aan uw gebruikersinstellingen JSON-bestand toe. Het blijft het oude debugger van de Code van VS gebruiken, nieuwe heeft [sommige kwesties](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
-1. Sluit alle exemplaren van apps die via `aio app run`het venster zijn geopend.
-1. De meest recente code implementeren met `aio app deploy`.
-1. Alleen de Asset compute Devtool uitvoeren met `npx adobe-asset-compute devtool`. Houd het open.
-1. In de redacteur van de Code van VS, voeg hieronder configuratie zuivert aan uw `launch.json`:
+1. Voeg aan uw gebruikersinstellingen JSON-bestand toe. Het blijft het oude debugger van de Code van VS gebruiken, nieuw heeft [sommige kwesties](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
+1. Sluit alle instanties van toepassingen die zijn geopend via `aio app run`.
+1. Implementeer de nieuwste code met `aio app deploy`.
+1. Alleen de Asset compute Ontwikkelen uitvoeren met `npx adobe-asset-compute devtool`. Houd het open.
+1. In de redacteur van de Code van VS, voeg hieronder zuivert configuratie aan uw `launch.json` toe:
 
    ```json
    {
@@ -195,11 +195,11 @@ Veel van deze stappen worden gewoonlijk geautomatiseerd door `aio` uit de doos, 
    }
    ```
 
-   Haal de naam van de handeling op uit de uitvoer van `aio app deploy`. Het ziet er zo uit `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker`.
+   Haal de NAAM van de ACTIE uit de uitvoer van `aio app deploy`. Het lijkt op `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker`.
 
-1. Selecteer `wskdebug worker` van de looppas/zuivert configuratie en druk het speel pictogram. Wacht tot het begint tot het **[!UICONTROL Klaar voor activering]** in het venster van de Console **** Debug toont.
+1. Selecteer `wskdebug worker` van de looppas/zuivert configuratie en druk het playbackpictogram. Wacht tot het om te beginnen tot het **[!UICONTROL Klaar voor activering]** in **[!UICONTROL Debug Console]** venster toont.
 
-1. Klik op **[!UICONTROL Uitvoeren]** in het gereedschap Ontwikkelen. U kunt de acties zien die in de redacteur van de Code van VS worden uitgevoerd en het logboeken begint te tonen.
+1. Klik **[!UICONTROL run]** in Devtool. U kunt de acties zien die in de redacteur van de Code van VS worden uitgevoerd en het logboeken begint te tonen.
 
 1. Stel een onderbrekingspunt in de code in, voer het opnieuw uit en druk op.
 
