@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP-API.'
 description: '[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '2925'
+source-wordcount: '2921'
 ht-degree: 1%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # [!DNL Asset Compute Service] HTTP-API  {#asset-compute-http-api}
 
-Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als Cloud Service de API gebruikt om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Zie [Elementmicroservices en verwerkingsprofielen gebruiken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) voor meer informatie.
+Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als  [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Zie [Elementmicroservices en verwerkingsprofielen gebruiken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) voor meer informatie.
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik  [!DNL Experience Manager] als Cloud Service.
+>[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met  [!DNL Experience Manager] als  [!DNL Cloud Service]een.
 
 Elke client van de HTTP-API [!DNL Asset Compute Service] moet deze flow op hoog niveau volgen:
 
