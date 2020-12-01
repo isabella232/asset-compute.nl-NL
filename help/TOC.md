@@ -5,7 +5,7 @@ solution: Experience Manager
 type: Documentation
 audience: end-user
 user-guide-title: Handleiding voor asset compute-service
-user-guide-description: Deze documentatie [!DNL Asset Compute Service] behandelt onderwerpen zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen.
+user-guide-description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 breadcrumb-title: Handleiding voor asset compute-service
 breadcrumb-url: /docs/asset-compute/using/home.html
 solution-title: AEM Assets
@@ -22,7 +22,7 @@ ht-degree: 6%
 ---
 
 
-# Gebruikershandleiding voor asset compute-service {#using}
+# Handboek voor asset compute-service {#using}
 
 + [Gebruikershandleiding voor asset compute Service](home.md)
 + [Overzicht](introduction.md)
@@ -30,7 +30,7 @@ ht-degree: 6%
 + [Ondersteunde bestandsindelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Architectuur](architecture.md)
 + [API-verwijzingen](api.md)
-+ Asset compute-service uitbreiden {#extend}
++ Service voor Asset compute uitbreiden {#extend}
    + [Info over het uitbreiden van de Compute Service](understand-extensibility.md)
    + [De omgeving instellen](setup-environment.md)
    + [De interne concepten van een app begrijpen](custom-application-internals.md)
