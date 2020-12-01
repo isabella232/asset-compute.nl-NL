@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 5%
 
 ---
@@ -30,9 +30,9 @@ De uitzonderingen op deze regel zijn versienota&#39;s waar de bekende kwesties m
 
 ### De bijdragen van de documentatie zijn niet om klantenvragen te beantwoorden
 
-Alle ideeën die u eventueel nodig hebt om de documentatie te verbeteren, zijn welkom als bijdragen. Opmerkingen, problemen en intrekkingsverzoeken zijn echter alleen bedoeld voor *bijdragen* . Ze zijn niet bedoeld om te worden gebruikt om vragen te beantwoorden over hoe u het product kunt gebruiken, projecten kunt implementeren of technische problemen kunt oplossen.
+Alle ideeën die u eventueel nodig hebt om de documentatie te verbeteren, zijn welkom als bijdragen. Opmerkingen, problemen en pull-aanvragen zijn echter alleen bedoeld voor *bijdragen*. Ze zijn niet bedoeld om te worden gebruikt om vragen te beantwoorden over hoe u het product kunt gebruiken, projecten kunt implementeren of technische problemen kunt oplossen.
 
-Vragen over het gebruik of technische fouten die u mogelijk hebt, moeten via het normale supportproces via de [Experience Cloud Enterprise Support-portal](https://helpx.adobe.com/nl/contact/enterprise-support.ec.html) worden gemeld of in de [Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)worden besproken.
+Vragen over het gebruik of technische fouten die u mogelijk hebt, moeten via het normale supportproces worden gerapporteerd via het [[!DNL Experience Cloud] Enterprise Support-portaal](https://helpx.adobe.com/nl/contact/enterprise-support.ec.html) of worden besproken in de [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 De documentatiebijdragen zijn geen vervanging voor de Adobe Customer Care*** en dergelijke bijdragen die antwoorden op supportgerelateerde vragen willen, worden afgewezen.
 
@@ -60,7 +60,7 @@ Alle lezers van de documentatie zijn over de hele wereld beschikbaar en kunnen n
 
 #### Handleiding van Microsoft volgen
 
-[De handleiding van Microsoft van Stijl](https://docs.microsoft.com/en-us/style-guide/welcome/) is een vrij beschikbare gids van de documentatiestijl die op softwaredocumentatie concentreert.
+[De handleiding van Microsoft van ](https://docs.microsoft.com/en-us/style-guide/welcome/) stijl is een vrij beschikbare gids van de documentatiestijl die op softwaredocumentatie concentreert.
 
 ### Opmaak
 
