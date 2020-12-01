@@ -2,9 +2,9 @@
 title: Architectuur van [!DNL Asset Compute Service].
 description: Hoe [!DNL Asset Compute Service] API, toepassingen, en SDK werken samen om de cloud-native service voor middelenverwerking te bieden.
 translation-type: tm+mt
-source-git-commit: 0fb256f7d9f83fbae564d9fd52ee6b2f34c5d7e9
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Architectuur van [!DNL Asset Compute Service] {#overview}
 
-De [!DNL Asset Compute Service] is gebouwd op het serverloze Adobe I/O Runtime-platform. Het biedt ondersteuning voor Adobe Sensei-inhoudsservices voor elementen. De aanroepende client (alleen [!DNL Experience Manager] als Cloud Service wordt ondersteund) wordt voorzien van de door Adobe Sensei gegenereerde informatie die de client voor het element heeft aangevraagd. De geretourneerde informatie heeft de JSON-indeling.
+De [!DNL Asset Compute Service] is gebouwd op het serverloze Adobe I/O Runtime-platform. Het biedt ondersteuning voor Adobe Sensei-inhoudsservices voor elementen. De aanroepende client (alleen [!DNL Experience Manager] als [!DNL Cloud Service] wordt ondersteund) wordt voorzien van de door Adobe Sensei gegenereerde informatie die de client voor het element heeft aangevraagd. De geretourneerde informatie heeft de JSON-indeling.
 
 [!DNL Asset Compute Service] is uitbreidbaar door aangepaste toepassingen te maken op basis van  [!DNL Project Firefly]. Deze aangepaste toepassingen zijn [!DNL Project Firefly] toepassingen zonder kop en voeren taken uit zoals aangepaste conversieprogramma&#39;s toevoegen of externe API&#39;s aanroepen om afbeeldingsbewerkingen uit te voeren.
 
