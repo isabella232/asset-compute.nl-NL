@@ -2,9 +2,9 @@
 title: Release-aantekeningen van [!DNL Asset Compute Service].
 description: Nieuwe functies, verbeteringen en bekende problemen in  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 Dit is de eerste release van [!DNL Asset Compute Service]. Het is een schaalbare en uitbreidbare service van [!DNL Adobe Experience Cloud] voor het verwerken van digitale elementen. Het kan beeld, video, document, en andere dossierformaten in verschillende vertoningen met inbegrip van duimnagels, gehaalde tekst en meta-gegevens, en archieven omzetten.
 
-De [!DNL Asset Compute Service] kan momenteel alleen worden gebruikt in [!DNL Experience Manager] als Cloud Service.
+Momenteel kan [!DNL Asset Compute Service] alleen in [!DNL Experience Manager] als [!DNL Cloud Service] worden gebruikt.
 
 ## Beperkingen en bekende problemen {#known-limitations}
 
