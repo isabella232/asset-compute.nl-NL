@@ -14,9 +14,9 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: AEM Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '120'
 ht-degree: 6%
 
 ---
@@ -37,6 +37,6 @@ ht-degree: 6%
    + [Een aangepaste toepassing ontwikkelen](develop-custom-application.md)
    + [Een aangepaste toepassing testen](test-custom-application.md)
    + [Een aangepaste toepassing implementeren](deploy-custom-application.md)
-   + [Integreer en gebruik in Experience Manager als Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [Integreer en gebruik  [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [Problemen oplossen](troubleshooting.md)
 + [Bijdragen aan het open-source-project](contribute-to-compute-service.md)
