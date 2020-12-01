@@ -2,9 +2,9 @@
 title: Inleiding aan  [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] is een service voor de verwerking van eigen middelen in de cloud die de complexiteit vermindert en de schaalbaarheid verbetert.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Ontwikkelaars kunnen aangepaste middelentoepassingen (ook wel aangepaste workers
 
 >[!NOTE]
 >
->De [!DNL Asset Compute Service] kan momenteel alleen via [!DNL Experience Manager] als Cloud Service worden gebruikt. Beheerders maken verwerkingsprofielen die de [!DNL Asset Compute Service] kunnen aanroepen om elementen door te geven voor verwerking. Zie [Elementmicroservices en verwerkingsprofielen gebruiken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Momenteel kan [!DNL Asset Compute Service] alleen via [!DNL Experience Manager] als [!DNL Cloud Service] worden gebruikt. Beheerders maken verwerkingsprofielen die de [!DNL Asset Compute Service] kunnen aanroepen om elementen door te geven voor verwerking. Zie [Elementmicroservices en verwerkingsprofielen gebruiken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Ondersteund gebruik van [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
@@ -45,7 +45,7 @@ Met de webservice [!DNL Asset Compute] kunt u miniaturen genereren voor verschil
 
 >[!MORELIKETHIS]
 >
->* [Overzicht van asset processing met asset microservices in Adobe Experience Manager als Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Overzicht van de verwerking van bedrijfsmiddelen met  [!DNL Adobe Experience Manager] onder andere [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) assetmicroservices.
 >* [Documentatie van het project zonder problemen](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [Ondersteunde bestandsindelingen voor verwerking](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [Opmerkingen bij de release van de Asset compute Service](release-notes.md)
