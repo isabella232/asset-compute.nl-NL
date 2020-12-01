@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] Handboek.'
 description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals inleiding, hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Deze documentatie behandelt [!DNL Asset Compute Service] onderwerpen zoals hoe t
 
 Zie de [releaseopmerkingen](/help/release-notes.md) voor informatie over de release en wat de meest recente is.
 
-Zie een overzicht over [mogelijkheden van elementmicroservices beschikbaar in Adobe Experience Manager als een Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) en hoe u de microservices kunt gebruiken in [!DNL Experience Manager].
+Zie een overzicht over [mogelijkheden van elementmicroservices beschikbaar in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) en hoe u de microservices kunt gebruiken in [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
