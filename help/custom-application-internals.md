@@ -1,6 +1,6 @@
 ---
 title: Begrijp het werk van een douanetoepassing.
-description: Interne werking [!DNL Asset Compute Service] van een aangepaste toepassing voor een beter begrip van de werking ervan.
+description: Het interne werk van [!DNL Asset Compute Service] douanetoepassing helpen begrijpen hoe het werkt.
 translation-type: tm+mt
 source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
 workflow-type: tm+mt
@@ -10,17 +10,17 @@ ht-degree: 0%
 ---
 
 
-# Interfaces van een aangepaste toepassing {#how-custom-application-works}
+# Intern van een aangepaste toepassing {#how-custom-application-works}
 
 Gebruik de volgende illustratie om inzicht te krijgen in de end-to-end workflow wanneer een digitaal element wordt verwerkt met een aangepaste toepassing van een client.
 
 ![Aangepaste workflow voor toepassingen](assets/customworker.png)
 
-*Afbeelding: Stappen die nodig zijn om een middel te verwerken met behulp van [!DNL Asset Compute Service].*
+*Afbeelding: Stappen die nodig zijn om een middel te verwerken met behulp van  [!DNL Asset Compute Service].*
 
 ## Registratie {#registration}
 
-De cliënt moet [`/register`](api.md#register) één keer vóór het eerste verzoek roepen om [`/process`](api.md#process-request) de dagboek URL voor het ontvangen van de Gebeurtenissen van Adobe I/O voor de Compute van de Activa van Adobe op te zetten en terug te winnen.
+De client moet [`/register`](api.md#register) één keer aanroepen voor het eerste verzoek aan [`/process`](api.md#process-request) om de journaal-URL voor het ontvangen van Adobe I/O Events for Adobe Asset compute in te stellen en op te halen.
 
 ```sh
 curl -X POST \
@@ -31,11 +31,11 @@ curl -X POST \
   -H "x-api-key: $API_KEY"
 ```
 
-De [`@adobe/asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) JavaScript-bibliotheek kan in NodeJS-toepassingen worden gebruikt om alle noodzakelijke stappen af te handelen, van registratie tot asynchrone gebeurtenisafhandeling. Voor meer informatie over de vereiste kopballen, zie [Authentificatie en Vergunning](api.md).
+De JavaScript-bibliotheek [`@adobe/asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) kan in NodeJS-toepassingen worden gebruikt om alle noodzakelijke stappen af te handelen, van registratie tot asynchrone gebeurtenisafhandeling. Voor meer informatie over de vereiste kopballen, zie [Authentificatie en Authorization](api.md).
 
-## Verwerking {#processing}
+## Bezig met verwerken {#processing}
 
-De client verzendt een [verwerkingsverzoek](api.md#process-request) .
+De client verzendt een [processing](api.md#process-request)-verzoek.
 
 ```sh
 curl -X POST \
@@ -47,9 +47,9 @@ curl -X POST \
   -d "<RENDITION_JSON>
 ```
 
-De client is verantwoordelijk voor de juiste opmaak van de uitvoeringen met vooraf ondertekende URL&#39;s. De [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) JavaScript-bibliotheek kan in NodeJS-toepassingen worden gebruikt om URL&#39;s vooraf te ondertekenen. Momenteel ondersteunt de bibliotheek alleen Azure Blob Storage en AWS S3 Containers.
+De client is verantwoordelijk voor de juiste opmaak van de uitvoeringen met vooraf ondertekende URL&#39;s. De JavaScript-bibliotheek [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) kan in NodeJS-toepassingen worden gebruikt om URL&#39;s vooraf te ondertekenen. Momenteel ondersteunt de bibliotheek alleen Azure Blob Storage en AWS S3 Containers.
 
-Het verwerkingsverzoek keert een terug `requestId` die voor het opiniepeilen van Adobe I/O Gebeurtenissen kan worden gebruikt.
+Het verwerkingsverzoek retourneert een `requestId` die kan worden gebruikt voor opiniepeiling van Adobe I/O Events.
 
 Hieronder ziet u een voorbeeld van een aangepaste aanvraag voor de verwerking van toepassingen.
 
@@ -69,15 +69,15 @@ Hieronder ziet u een voorbeeld van een aangepaste aanvraag voor de verwerking va
 }
 ```
 
-De [!DNL Asset Compute Service] gebruiker verzendt de aanvragen voor de aangepaste uitvoering van de toepassing naar de aangepaste toepassing. Er wordt een HTTP-POST gebruikt naar de opgegeven toepassings-URL, de beveiligde webactie-URL van Project Firefly. Voor alle aanvragen wordt het HTTPS-protocol gebruikt om de gegevensbeveiliging te maximaliseren.
+[!DNL Asset Compute Service] verzendt de de vertoningsverzoeken van de douanetoepassing naar de douanetoepassing. Er wordt een HTTP-POST gebruikt naar de opgegeven toepassings-URL, de beveiligde webactie-URL van Project Firefly. Voor alle aanvragen wordt het HTTPS-protocol gebruikt om de gegevensbeveiliging te maximaliseren.
 
-De [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) die door een aangepaste toepassing wordt gebruikt, handelt de HTTP-aanvraag af. Het behandelt ook het downloaden van de bron, het uploaden van uitvoeringen, het verzenden van I/O-gebeurtenissen en foutafhandeling.
+De [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) die door een douanetoepassing wordt gebruikt behandelt het verzoek van de POST van HTTP. Het behandelt ook het downloaden van de bron, het uploaden van uitvoeringen, het verzenden van I/O-gebeurtenissen en foutafhandeling.
 
 <!-- TBD: Add the application diagram. -->
 
 ### Toepassingscode {#application-code}
 
-De code van de douane moet slechts callback verstrekken die het plaatselijk beschikbare brondossier (`source.path`) neemt. Het `rendition.path` is de locatie waar het eindresultaat van een aanvraag voor de verwerking van bedrijfsmiddelen moet worden geplaatst. De aangepaste toepassing gebruikt de callback om de lokaal beschikbare bronbestanden om te zetten in een weergavebestand met de naam die wordt doorgegeven (`rendition.path`). Een aangepaste toepassing moet schrijven naar `rendition.path` om een uitvoering te maken:
+De code van de douane moet slechts callback verstrekken die het plaatselijk beschikbare brondossier (`source.path`) neemt. `rendition.path` is de plaats om het definitieve resultaat van een verzoek van de activaverwerking te plaatsen. De douanetoepassing gebruikt callback om de plaatselijk beschikbare brondossiers in een vertoningsdossier te veranderen gebruikend de binnen overgegaan naam (`rendition.path`). Een aangepaste toepassing moet naar `rendition.path` schrijven om een vertoning te maken:
 
 ```javascript
 const { worker } = require('@adobe/asset-compute-sdk');
@@ -95,35 +95,35 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-### Bronbestanden downloaden {#download-source}
+### Bronbestanden {#download-source} downloaden
 
-Een aangepaste toepassing heeft alleen betrekking op lokale bestanden. Het downloaden van het bronbestand wordt afgehandeld door de SDK [Asset Compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk).
+Een aangepaste toepassing heeft alleen betrekking op lokale bestanden. Het downloaden van het bronbestand wordt afgehandeld door de [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk).
 
 ### Vertoning maken {#rendition-creation}
 
-De SDK roept een asynchrone callback-functie [voor](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) uitvoering aan voor elke uitvoering.
+De SDK roept een asynchrone [callback functie van de vertoning](https://github.com/adobe/asset-compute-sdk#rendition-callback-for-worker-required) voor elke vertoning aan.
 
-De callback-functie heeft toegang tot de [bron](https://github.com/adobe/asset-compute-sdk#source) - en [weergaveobjecten](https://github.com/adobe/asset-compute-sdk#rendition) . Het `source.path` bestaat al en is het pad naar de lokale kopie van het bronbestand. Het `rendition.path` is het pad waar de verwerkte vertoning moet worden opgeslagen. Tenzij de markering [disableSourceDownload is ingesteld](https://github.com/adobe/asset-compute-sdk#worker-options-optional) , moet de toepassing exact de markering gebruiken `rendition.path`. Anders kan de SDK het weergavebestand niet vinden of identificeren en mislukt.
+De callback functie heeft toegang tot [source](https://github.com/adobe/asset-compute-sdk#source) en [rendition](https://github.com/adobe/asset-compute-sdk#rendition) voorwerpen. De `source.path` bestaat al en is het pad naar de lokale kopie van het bronbestand. De `rendition.path` is het pad waar de verwerkte vertoning moet worden opgeslagen. Tenzij de [disableSourceDownload vlag](https://github.com/adobe/asset-compute-sdk#worker-options-optional) wordt geplaatst, moet de toepassing precies `rendition.path` gebruiken. Anders kan de SDK het weergavebestand niet vinden of identificeren en mislukt.
 
 De overdreven vereenvoudiging van het voorbeeld wordt gedaan om de anatomie van een douanetoepassing te illustreren en te concentreren. De toepassing kopieert het bronbestand alleen naar de weergavebestemming.
 
-Zie [Asset Compute SDK API](https://github.com/adobe/asset-compute-sdk#api-details)voor meer informatie over de callback-parameters van de uitvoering.
+Voor meer informatie over de parameters van de vertoningscallback, zie [Asset compute SDK API](https://github.com/adobe/asset-compute-sdk#api-details).
 
-### Uitvoeringen uploaden {#upload-rendition}
+### Uitvoeringen {#upload-rendition} uploaden
 
-Nadat elke vertoning is gemaakt en opgeslagen in een bestand met het pad dat is opgegeven door `rendition.path`, uploadt de [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) elke uitvoering naar een cloudopslag (AWS of Azure). Een aangepaste toepassing krijgt meerdere uitvoeringen tegelijkertijd als en alleen als de binnenkomende aanvraag meerdere uitvoeringen bevat die verwijzen naar dezelfde toepassings-URL. Het uploaden naar de cloudopslag vindt plaats na elke uitvoering en voordat de callback voor de volgende uitvoering wordt uitgevoerd.
+Nadat elke vertoning is gemaakt en opgeslagen in een bestand met het pad dat is opgegeven door `rendition.path`, uploadt de [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) elke uitvoering naar een cloudopslag (AWS of Azure). Een aangepaste toepassing krijgt meerdere uitvoeringen tegelijkertijd als en alleen als de binnenkomende aanvraag meerdere uitvoeringen bevat die verwijzen naar dezelfde toepassings-URL. Het uploaden naar de cloudopslag vindt plaats na elke uitvoering en voordat de callback voor de volgende uitvoering wordt uitgevoerd.
 
-Het `batchWorker()` heeft een ander gedrag, aangezien het eigenlijk alle vertoningen verwerkt en slechts nadat al verwerkt is uploadt die.
+De `batchWorker()` heeft een ander gedrag, aangezien het eigenlijk alle vertoningen verwerkt en slechts nadat allen zijn verwerkt uploadt die.
 
-## Adobe I/O-gebeurtenissen {#aio-events}
+## Adobe I/O Events {#aio-events}
 
-De SDK verzendt Adobe I/O-gebeurtenissen voor elke uitvoering. Deze gebeurtenissen zijn van het type `rendition_created` of `rendition_failed` afhankelijk van het resultaat. Zie Asynchrone gebeurtenissen [voor het berekenen van](api.md#asynchronous-events) middelen voor gebeurtenisdetails.
+De SDK verzendt Adobe I/O Events voor elke uitvoering. Deze gebeurtenissen zijn van het type `rendition_created` of `rendition_failed` afhankelijk van het resultaat. Zie [Asset compute asynchrone gebeurtenissen](api.md#asynchronous-events) voor gebeurtenisdetails.
 
 ## Adobe I/O-gebeurtenissen ontvangen {#receive-aio-events}
 
-De klant pollt het [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) volgens de logica van zijn verbruik. De eerste journaal-URL is de URL die wordt opgegeven in de API-reactie. `/register` Gebeurtenissen kunnen worden geïdentificeerd met de gebeurtenissen `requestId` die aanwezig zijn in de gebeurtenissen en zijn gelijk aan de gebeurtenissen die worden geretourneerd in `/process`. Elke vertoning heeft een aparte gebeurtenis die wordt verzonden zodra de vertoning is geüpload (of mislukt). Nadat de client een overeenkomende gebeurtenis heeft ontvangen, kan de client de resulterende uitvoeringen weergeven of op een andere manier afhandelen.
+De client pollt het [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) volgens de logica van zijn verbruik. De eerste journaal-URL is de URL die wordt opgegeven in de API-reactie `/register`. Gebeurtenissen kunnen worden geïdentificeerd met de `requestId` die aanwezig is in de gebeurtenissen en die hetzelfde is als geretourneerd in `/process`. Elke vertoning heeft een aparte gebeurtenis die wordt verzonden zodra de vertoning is geüpload (of mislukt). Nadat de client een overeenkomende gebeurtenis heeft ontvangen, kan de client de resulterende uitvoeringen weergeven of op een andere manier afhandelen.
 
-De JavaScript-bibliotheek [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) maakt het opiniepeilen van het tijdschrift eenvoudig met de `waitActivation()` methode om alle gebeurtenissen op te halen.
+De bibliotheek [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) maakt de dagboekopiniepeiling eenvoudig gebruikend de `waitActivation()` methode om alle gebeurtenissen te krijgen.
 
 ```javascript
 const events = await assetCompute.waitActivation(requestId);
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Zie [Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml)voor meer informatie over hoe u journaalgebeurtenissen kunt ophalen.
+Zie [Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml) voor meer informatie over hoe u journaalgebeurtenissen kunt ophalen.
 
 <!-- TBD:
 * Illustration of the controls/data flow.
