@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service].
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Zorg ervoor dat de [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is g
    create console.json
    ```
 
-1. Selecteer ten minste `Actions` bij de aanwijzing met `Which Adobe I/O App features do you want to enable for this project?`:
+1. Wanneer ertoe aangezet met `Which Adobe I/O App features do you want to enable for this project?`, selecteer `Actions`. Schakel de optie `Web Assets` uit als de webelementen verschillende verificatie- en autorisatiecontroles gebruiken.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
@@ -50,7 +50,7 @@ Zorg ervoor dat de [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is g
    ◯ CI/CD: Include GitHub Actions based workflows for Build, Test and Deploy
    ```
 
-1. Selecteer `Which type of sample actions do you want to create?` wanneer hierom wordt gevraagd:`Adobe Asset Compute Worker`
+1. Selecteer `Adobe Asset Compute Worker` wanneer hierom wordt gevraagd:`Which type of sample actions do you want to create?`
 
    ```bash
    ? Which type of sample actions do you want to create?
