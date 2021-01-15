@@ -2,9 +2,9 @@
 title: Begrijp over het uitbreiden [!DNL Asset Compute Service].
 description: Wanneer en hoe te om  [!DNL Asset Compute Service] functionaliteit uit te breiden om de verwerking van douaneactiva te doen.
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Veel vereisten voor vertoningen, zoals het omzetten in indelingen en het wijzige
 >
 >[!DNL Asset Compute Service] is alleen beschikbaar voor gebruik met  [!DNL Experience Manager] als  [!DNL Cloud Service]een.
 
-De aangepaste toepassingen hebben geen kop [Project Firefly](https://github.com/AdobeDocs/project-firefly)-toepassingen. Het uitbreiden van [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) en het Project van de projectontwikkelaar het Levensvatbare hulpmiddel. Dit staat ontwikkelaars toe om zich op bedrijfslogica te concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een Adobe I/O Runtime-handeling zonder normale serverless. Het is één JavaScript-functie Node.js. Het [basis voorbeeld van de douanetoepassing](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert het.
+De aangepaste toepassingen hebben geen kop [Project Firefly](https://github.com/AdobeDocs/project-firefly)-toepassingen. Het uitbreiden van [!DNL Asset Compute Service] met douanetoepassingen wordt eenvoudig gemaakt door [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) en het Project van de projectontwikkelaar het Levensvatbare hulpmiddel. Dit staat ontwikkelaars toe om zich op bedrijfslogica te concentreren. Het maken van aangepaste toepassingen is net zo eenvoudig als het maken van een eenvoudige ([!DNL Adobe I/O] Runtime-actie). Het is één JavaScript-functie Node.js. Het [basis voorbeeld van de douanetoepassing](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustreert het.
 
 ## Vereisten voor vereisten en voorzieningen {#prerequisites-and-provisioning}
 
@@ -29,7 +29,7 @@ Zorg ervoor dat u aan de volgende voorwaarden voldoet:
 * De ervaringsorganisatie moet [!DNL Experience Manager] hebben als [!DNL Cloud Service] toegelaten.
 * [!DNL Adobe Experience Cloud] organisatie maakt deel uit van het voorvertoningsprogramma voor  [!DNL Project Firefly] ontwikkelaars. Zie [hoe te om voor toegang toe te passen](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
 * Verzeker een ontwikkelaarrol of beheerdertoestemmingen in de organisatie voor de ontwikkelaar.
-* Zorg ervoor dat [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is geïnstalleerd.
+* Zorg ervoor dat [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) lokaal is geïnstalleerd.
 
 <!-- TBD for later:
 
