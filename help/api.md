@@ -2,10 +2,10 @@
 title: '[!DNL Asset Compute Service] HTTP-API.'
 description: '[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken.'
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2906'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ Voor alle API&#39;s is verificatie van toegangstoken vereist. De verzoeken moete
 
 1. `Authorization` header met token voor toonder, dit is het token voor een technische account, ontvangen via  [JWT ](https://www.adobe.io/authentication/auth-methods.html) Exchange van het project Adobe Developer Console. Het [bereik](#scopes) wordt hieronder beschreven.
 
-<!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in AIO's GitHub repo to get a new URL.
+<!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
 
 1. `x-gw-ims-org-id` met de IMS-organisatie-id.
