@@ -2,10 +2,10 @@
 title: Problemen oplossen [!DNL Asset Compute Service].
 description: Los en zuiver douanetoepassingen problemen op gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,17 +19,17 @@ Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problem
 * Verzeker om het even welke fouten die uit schoonmaakbeurt bij mislukking kunnen voortkomen niet hun eigen fouten produceren die het originele probleem verbergen.
 
 * Wanneer het beginnen van het ontwikkelaarshulpmiddel voor het eerst met nieuwe [!DNL Asset Compute Service] integratie, kan het ontbreken het eerste verwerkingsverzoek omdat het Dagboek van de Gebeurtenissen van de Asset compute niet volledig opstelling kan zijn. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
-* Als u fouten die Asset compute `/register` of `/process` verzoeken verzenden in werking stelt, zorg ervoor dat alle noodzakelijke APIs aan het Project en de Werkruimte van Adobe I/O worden toegevoegd—namelijk Asset compute, Gebeurtenissen IO, het Beheer van Gebeurtenissen IO, en Runtime.
+* Als u fouten die Asset compute `/register` of `/process` verzoeken verzenden in werking stelt, zorg ervoor dat alle noodzakelijke APIs aan [!DNL Adobe I/O] project en Werkruimte-namelijk Asset compute, Gebeurtenissen IO, het Beheer van Gebeurtenissen IO, en Runtime worden toegevoegd.
 
-## Problemen met aanmelden via Adobe I/O CLI {#login-via-aio-cli}
+## Problemen met aanmelden via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
-Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [door Adobe I/O CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
+Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [door  [!DNL Adobe I/O] CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
 
 1. Navigeer naar uw Firefly-project en -werkruimte op de [Adobe Developer Console](https://console.adobe.io/) en druk **[!UICONTROL Download]** in de rechterbovenhoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
 
 1. Navigeer naar het ENV-bestand in uw Firefly-toepassing.
 
-1. Voeg de Adobe I/O Runtime Credentials toe. Haal de Adobe I/O Runtime-gegevens op van de gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime`. Voeg de I/O Runtime geloofsbrieven in de `AIO_runtime_XXX` variabelen toe:
+1. Voeg de [!DNL Adobe I/O] Runtime Credentials toe. Download de [!DNL Adobe I/O] A Runtime geloofsbrieven van gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime`. Voeg de [!DNL Adobe I/O] geloofsbrieven van Runtime in `AIO_runtime_XXX` variabelen toe:
 
    ```json
    AIO_runtime_auth=
