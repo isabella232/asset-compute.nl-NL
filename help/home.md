@@ -2,17 +2,17 @@
 title: '[!DNL Adobe Asset Compute Service] Handboek.'
 description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals inleiding, hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Info [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] is een schaalbare en uitbreidbare service van Adobe Experience Cloud voor het verwerken van digitale middelen. U kunt afbeeldingen, video, documenten en andere bestandsindelingen transformeren in verschillende uitvoeringen, zoals miniaturen, uitgenomen tekst en metagegevens, archieven en nog veel meer. Ontwikkelaars kunnen aangepaste toepassingen (ook wel aangepaste workers genoemd) insluiten voor aangepaste toepassingen die zijn gebouwd met [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) en die worden uitgevoerd in serverless [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] is een schaalbare en uitbreidbare service van Adobe Experience Cloud voor het verwerken van digitale middelen. U kunt afbeeldingen, video, documenten en andere bestandsindelingen transformeren in verschillende uitvoeringen, zoals miniaturen, uitgenomen tekst en metagegevens, archieven en nog veel meer. Ontwikkelaars kunnen aangepaste toepassingen (ook wel aangepaste workers genoemd) insluiten voor aangepaste toepassingen die zijn gebouwd met [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) en die worden uitgevoerd in serverless [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 Deze documentatie behandelt [!DNL Asset Compute Service] onderwerpen zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen. Als u wilt weten wat [!DNL Asset Compute Service] aanbiedt, raadpleegt u deze [inleiding](introduction.md). Ontdek [wat de service voor u kan doen](introduction.md#possible-use-cases-benefits).
 
