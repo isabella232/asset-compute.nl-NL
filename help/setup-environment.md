@@ -2,9 +2,9 @@
 title: Stel de ontwikkelomgeving in die vereist is voor  [!DNL Asset Compute Service].
 description: Ontwikkelomgeving ingesteld voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 translation-type: tm+mt
-source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Als u een installatie wilt maken waarmee u zich kunt ontwikkelen voor [!DNL Asse
    * [Docker Desktop](https://www.docker.com/get-started).
    * [NodeJS](https://nodejs.org) (v10 tot v12 LTS, oneven versies worden niet aanbevolen) en  [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan `brew install node` doen om beide te installeren. Anders, download het van [deJS downloadpagina](https://nodejs.org/en/).
    * winde die voor NodeJS goed is, adviseren wij [de Code van Visual Studio (de Code van VS)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (b.v. debugger) wordt nog niet gesteund.
-   * [AIO CLI](https://github.com/adobe/aio-cli) (`aio`) - installeren met  `npm install -g @adobe/aio-cli`.
+   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installeren met  `npm install -g @adobe/aio-cli`.
 
 1. Zorg ervoor dat u voldoet aan de [voorwaarden](/help/understand-extensibility.md#prerequisites-and-provisioning).
 
