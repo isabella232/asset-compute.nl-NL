@@ -2,10 +2,10 @@
 title: '[!DNL Asset Compute Service] HTTP-API.'
 description: '[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken.'
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '2921'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -68,11 +68,11 @@ Hiervoor moet het [!DNL Adobe Developer Console]-project worden geabonneerd op `
    * metareaal: `asset_compute_meta`
    * bereik: `asset_compute,read_organizations`
 
-* Adobe I/O Events
+* [!DNL Adobe I/O] Gebeurtenissen
    * metareaal: `event_receiver_api`
    * bereik: `event_receiver,event_receiver_api`
 
-* Adobe I/O Management API
+* [!DNL Adobe I/O] Beheer-API
    * metareaal: `ent_adobeio_sdk`
    * bereik: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
@@ -412,9 +412,9 @@ De PNG-indeling wordt gebruikt als een watermerk.
 
 ## Asynchrone gebeurtenissen {#asynchronous-events}
 
-Zodra de verwerking van een vertoning is voltooid of wanneer een fout optreedt, wordt een gebeurtenis verzonden naar een [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). De cliënten moeten aan dagboek URL luisteren die door [/register](#register) wordt verstrekt. De dagboekreactie omvat een `event` serie die uit één voorwerp voor elke gebeurtenis bestaat, waarvan `event` gebied de daadwerkelijke gebeurtenislading omvat.
+Zodra de verwerking van een vertoning is voltooid of wanneer een fout optreedt, wordt een gebeurtenis verzonden naar een [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). De cliënten moeten aan dagboek URL luisteren die door [/register](#register) wordt verstrekt. De dagboekreactie omvat een `event` serie die uit één voorwerp voor elke gebeurtenis bestaat, waarvan `event` gebied de daadwerkelijke gebeurtenislading omvat.
 
-Het Adobe I/O-gebeurtenistype voor alle gebeurtenissen van [!DNL Asset Compute Service] is `asset_compute`. Het tijdschrift wordt alleen automatisch op dit gebeurtenistype geabonneerd en er is geen verdere vereiste om te filteren op basis van het Adobe I/O-gebeurtenistype. De service-specifieke gebeurtenistypen zijn beschikbaar in de eigenschap `type` van de gebeurtenis.
+Het gebeurtenistype [!DNL Adobe I/O] voor alle gebeurtenissen van [!DNL Asset Compute Service] is `asset_compute`. Het dagboek wordt automatisch op dit gebeurtenistype slechts geabonneerd en er is geen verdere vereiste om te filtreren die op het [!DNL Adobe I/O] gebeurtenistype wordt gebaseerd. De service-specifieke gebeurtenistypen zijn beschikbaar in de eigenschap `type` van de gebeurtenis.
 
 ### Gebeurtenistypen {#event-types}
 
