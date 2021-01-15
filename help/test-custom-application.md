@@ -2,9 +2,9 @@
 title: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
 description: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Met het testframework voor de eenheid van de Asset compute-toepassing kunt u toe
 
 ### Tests toevoegen {#add-tests}
 
-Tests worden verwacht in de map `test` op het hoofdniveau van het AIO-project. De testgevallen voor elke toepassing moeten zich in het pad `test/asset-compute/<worker-name>` bevinden, met één map voor elk testgeval:
+Tests worden verwacht binnen de `test` omslag op het wortelniveau van het [!DNL Adobe I/O] project. De testgevallen voor elke toepassing moeten zich in het pad `test/asset-compute/<worker-name>` bevinden, met één map voor elk testgeval:
 
 ```yaml
 action/
