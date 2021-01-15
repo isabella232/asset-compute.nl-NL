@@ -2,9 +2,9 @@
 title: Begrijp het werk van een douanetoepassing.
 description: Het interne werk van [!DNL Asset Compute Service] douanetoepassing helpen begrijpen hoe het werkt.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Gebruik de volgende illustratie om inzicht te krijgen in de end-to-end workflow 
 
 ## Registratie {#registration}
 
-De client moet [`/register`](api.md#register) één keer aanroepen voor het eerste verzoek aan [`/process`](api.md#process-request) om de journaal-URL voor het ontvangen van Adobe I/O Events for Adobe Asset compute in te stellen en op te halen.
+De client moet [`/register`](api.md#register) één keer aanroepen voor het eerste verzoek aan [`/process`](api.md#process-request) om de journaal-URL voor het ontvangen van [!DNL Adobe I/O] gebeurtenissen voor Adobe-Asset compute in te stellen en op te halen.
 
 ```sh
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
 
 De client is verantwoordelijk voor de juiste opmaak van de uitvoeringen met vooraf ondertekende URL&#39;s. De JavaScript-bibliotheek [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) kan in NodeJS-toepassingen worden gebruikt om URL&#39;s vooraf te ondertekenen. Momenteel ondersteunt de bibliotheek alleen Azure Blob Storage en AWS S3 Containers.
 
-Het verwerkingsverzoek retourneert een `requestId` die kan worden gebruikt voor opiniepeiling van Adobe I/O Events.
+Het verwerkingsverzoek keert `requestId` terug die voor het opiniepeilen [!DNL Adobe I/O] Gebeurtenissen kan worden gebruikt.
 
 Hieronder ziet u een voorbeeld van een aangepaste aanvraag voor de verwerking van toepassingen.
 
@@ -71,7 +71,7 @@ Hieronder ziet u een voorbeeld van een aangepaste aanvraag voor de verwerking va
 
 [!DNL Asset Compute Service] verzendt de de vertoningsverzoeken van de douanetoepassing naar de douanetoepassing. Er wordt een HTTP-POST gebruikt naar de opgegeven toepassings-URL, de beveiligde webactie-URL van Project Firefly. Voor alle aanvragen wordt het HTTPS-protocol gebruikt om de gegevensbeveiliging te maximaliseren.
 
-De [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) die door een douanetoepassing wordt gebruikt behandelt het verzoek van de POST van HTTP. Het behandelt ook het downloaden van de bron, het uploaden van uitvoeringen, het verzenden van I/O-gebeurtenissen en foutafhandeling.
+De [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) die door een douanetoepassing wordt gebruikt behandelt het verzoek van de POST van HTTP. Het behandelt ook het downloaden van de bron, het uploaden van uitvoeringen, het verzenden van [!DNL Adobe I/O] gebeurtenissen en fout behandeling.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -115,13 +115,13 @@ Nadat elke vertoning is gemaakt en opgeslagen in een bestand met het pad dat is 
 
 De `batchWorker()` heeft een ander gedrag, aangezien het eigenlijk alle vertoningen verwerkt en slechts nadat allen zijn verwerkt uploadt die.
 
-## Adobe I/O Events {#aio-events}
+## [!DNL Adobe I/O] Gebeurtenissen {#aio-events}
 
-De SDK verzendt Adobe I/O Events voor elke uitvoering. Deze gebeurtenissen zijn van het type `rendition_created` of `rendition_failed` afhankelijk van het resultaat. Zie [Asset compute asynchrone gebeurtenissen](api.md#asynchronous-events) voor gebeurtenisdetails.
+De SDK verzendt [!DNL Adobe I/O]-gebeurtenissen voor elke uitvoering. Deze gebeurtenissen zijn van het type `rendition_created` of `rendition_failed` afhankelijk van het resultaat. Zie [Asset compute asynchrone gebeurtenissen](api.md#asynchronous-events) voor gebeurtenisdetails.
 
-## Adobe I/O-gebeurtenissen ontvangen {#receive-aio-events}
+## [!DNL Adobe I/O] Gebeurtenissen {#receive-aio-events} ontvangen
 
-De client pollt het [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) volgens de logica van zijn verbruik. De eerste journaal-URL is de URL die wordt opgegeven in de API-reactie `/register`. Gebeurtenissen kunnen worden geïdentificeerd met de `requestId` die aanwezig is in de gebeurtenissen en die hetzelfde is als geretourneerd in `/process`. Elke vertoning heeft een aparte gebeurtenis die wordt verzonden zodra de vertoning is geüpload (of mislukt). Nadat de client een overeenkomende gebeurtenis heeft ontvangen, kan de client de resulterende uitvoeringen weergeven of op een andere manier afhandelen.
+De client pollt het [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) volgens de logica van zijn verbruik. De eerste journaal-URL is de URL die wordt opgegeven in de API-reactie `/register`. Gebeurtenissen kunnen worden geïdentificeerd met de `requestId` die aanwezig is in de gebeurtenissen en die hetzelfde is als geretourneerd in `/process`. Elke vertoning heeft een aparte gebeurtenis die wordt verzonden zodra de vertoning is geüpload (of mislukt). Nadat de client een overeenkomende gebeurtenis heeft ontvangen, kan de client de resulterende uitvoeringen weergeven of op een andere manier afhandelen.
 
 De bibliotheek [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) maakt de dagboekopiniepeiling eenvoudig gebruikend de `waitActivation()` methode om alle gebeurtenissen te krijgen.
 
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Zie [Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml) voor meer informatie over hoe u journaalgebeurtenissen kunt ophalen.
+Zie [[!DNL Adobe I/O] Gebeurtenissen API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml) voor meer informatie over hoe u journaalgebeurtenissen kunt ophalen.
 
 <!-- TBD:
 * Illustration of the controls/data flow.
