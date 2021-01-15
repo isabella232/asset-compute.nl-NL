@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service].
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Voordat u begint met het ontwikkelen van een aangepaste toepassing:
 
 ## Een aangepaste toepassing {#create-custom-application} maken
 
-Zorg ervoor dat de [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is geïnstalleerd.
+Zorg ervoor om [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) plaatselijk te hebben geïnstalleerd.
 
 1. Als u een aangepaste toepassing wilt maken, [maakt u een Firefly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Om dit te doen, voer `aio app init <app-name>` in uw terminal uit.
 
@@ -32,7 +32,7 @@ Zorg ervoor dat de [Adobe I/O CLI](https://github.com/adobe/aio-cli) lokaal is g
 
    ```sh
    $ aio app init <app-name>
-   Retrieving information from Adobe I/O Console..
+   Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
    ? Select Project MyFireflyProject
    ? Select Workspace myworkspace
@@ -121,7 +121,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 
 Alvorens de toepassing met het Hulpmiddel van de Ontwikkelaar van de Asset compute uit te voeren, vorm behoorlijk [geloofsbrieven](#developer-tool-credentials).
 
-Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het ontwikkelaarsgereedschap. De toepassing implementeert de actie op Adobe I/O Runtime en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
+Gebruik de opdracht `aio app run` om de toepassing uit te voeren in het ontwikkelaarsgereedschap. De toepassing implementeert de handeling in [!DNL Adobe I/O] Runtime en start het hulpprogramma voor ontwikkeling op uw lokale computer. Dit hulpmiddel wordt gebruikt om toepassingsverzoeken tijdens ontwikkeling te testen. Hier volgt een voorbeeld van een verzoek om uitvoering:
 
 ```json
 "renditions": [
@@ -266,7 +266,7 @@ const key = params.secretKey;
 
 ## Toepassingen {#sizing-workers} vergroten/verkleinen
 
-Een toepassing voert in een container in Adobe I/O Runtime met [limieten](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) uit die door `manifest.yml` kunnen worden gevormd:
+Een toepassing voert in een container in [!DNL Adobe I/O] Runtime met [grenzen](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) uit die door `manifest.yml` kan worden gevormd:
 
 ```yaml
     actions:
