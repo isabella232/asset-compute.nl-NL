@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service].
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ Wegens de meer uitgebreide verwerking typisch die door de toepassingen van de As
 
 De standaardonderbreking voor acties in Runtime is een minuut maar het kan worden verhoogd door de `timeout` grens (in milliseconden) te plaatsen. Verhoog deze tijd als u grotere bestanden wilt verwerken. Houd rekening met de totale tijd die nodig is om de bron te downloaden, het bestand te verwerken en de vertoning te uploaden. Als een handeling uitvalt, d.w.z. de activering niet vóór de opgegeven time-outlimiet retourneert, verwijdert Runtime de container en gebruikt deze niet opnieuw.
 
-De toepassingen van de asset compute door aard neigen om netwerk en schijfIO verbindend te zijn. Het bronbestand moet eerst worden gedownload, de verwerking is vaak IO zwaar en de resulterende uitvoeringen worden opnieuw geüpload.
+De toepassingen van de asset compute door aard neigen om netwerk en schijfInput of output gebonden te zijn. Het bronbestand moet eerst worden gedownload, de verwerking is vaak bronintensief en vervolgens worden de resulterende uitvoeringen opnieuw geüpload.
 
 Het geheugen beschikbaar aan een actiecontainer wordt gespecificeerd door `memorySize` in MB. Momenteel bepaalt dit ook hoeveel toegang van cpu tot de container krijgt, en het belangrijkste is het een zeer belangrijk element van de kosten om Runtime (grotere containers kosten meer) te gebruiken. Gebruik hier een grotere waarde wanneer uw verwerking meer geheugen of cpu vereist maar ben voorzichtig om geen middelen te verspillen aangezien groter de containers zijn, lager de algemene productie is.
 
