@@ -2,10 +2,10 @@
 title: Problemen oplossen [!DNL Asset Compute Service].
 description: Los en zuiver douanetoepassingen problemen op gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '288'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problem
 * Verzeker om het even welke fouten die uit schoonmaakbeurt bij mislukking kunnen voortkomen niet hun eigen fouten produceren die het originele probleem verbergen.
 
 * Wanneer het beginnen van het ontwikkelaarshulpmiddel voor het eerst met nieuwe [!DNL Asset Compute Service] integratie, kan het ontbreken het eerste verwerkingsverzoek omdat het Dagboek van de Gebeurtenissen van de Asset compute niet volledig opstelling kan zijn. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
-* Als u fouten die Asset compute `/register` of `/process` verzoeken verzenden in werking stelt, zorg ervoor dat alle noodzakelijke APIs aan [!DNL Adobe I/O] project en Werkruimte-namelijk Asset compute, Gebeurtenissen IO, het Beheer van Gebeurtenissen IO, en Runtime worden toegevoegd.
+* Als er fouten optreden bij het verzenden van Asset compute `/register`- of `/process`-aanvragen, moet u ervoor zorgen dat alle benodigde API&#39;s worden toegevoegd aan het [!DNL Adobe I/O]-project en de werkruimte—dat wil zeggen, Asset compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management en [!DNL Adobe I/O] Runtime.
 
 ## Problemen met aanmelden via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
