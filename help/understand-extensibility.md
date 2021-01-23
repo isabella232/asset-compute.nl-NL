@@ -1,8 +1,8 @@
 ---
-title: Begrijp over het uitbreiden [!DNL Asset Compute Service].
+title: Begrijp over uitbreiden [!DNL Asset Compute Service]
 description: Wanneer en hoe te om  [!DNL Asset Compute Service] functionaliteit uit te breiden om de verwerking van douaneactiva te doen.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
