@@ -1,8 +1,8 @@
 ---
-title: Architectuur van [!DNL Asset Compute Service].
+title: Architectuur van [!DNL Asset Compute Service]
 description: Hoe [!DNL Asset Compute Service] API, toepassingen, en SDK werken samen om de cloud-native service voor middelenverwerking te bieden.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
