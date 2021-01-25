@@ -1,8 +1,8 @@
 ---
-title: Release-aantekeningen van [!DNL Asset Compute Service].
+title: Opmerkingen bij de release van [!DNL Asset Compute Service]
 description: Nieuwe functies, verbeteringen en bekende problemen in  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
