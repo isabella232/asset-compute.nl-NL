@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service]
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -96,11 +96,14 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Als `console.json` niet direct in de wortel van uw Firefly App is, voeg de absolute weg aan het Adobe de integratie JSON dossier van de Console van de Ontwikkelaar toe. Dit is het zelfde [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload. U kunt ook de opdracht `aio app use <path_to_console_json>` gebruiken in plaats van het pad aan het ENV-bestand toe te voegen.
+1. Download het bestand vanuit de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * Wijzig de naam van het bestand in `config.json` en verplaats het in de hoofdmap van het project.
+   * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie van de Adobe Developer Console. Dit is het zelfde [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Voeg S3 of Azure opslaggeloofsbrieven toe. U hebt slechts toegang tot één cloudopslagoplossing nodig.
 
@@ -116,6 +119,10 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>Het `config.json`-bestand bevat referenties. Voeg vanuit uw project het JSON-bestand toe aan uw `.gitignore`-bestand om te voorkomen dat het wordt gedeeld. Hetzelfde geldt voor de .env- en .aio-bestanden.
 
 ## De toepassing {#run-custom-application} uitvoeren
 
