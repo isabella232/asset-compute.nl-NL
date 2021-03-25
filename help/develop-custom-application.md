@@ -2,7 +2,7 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service]
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
+source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 
 1. Download het bestand vanuit de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 
-   * Wijzig de naam van het bestand in `config.json` en verplaats het in de hoofdmap van het project.
+   * Wijzig de naam van het bestand in `console.json` en verplaats het in de hoofdmap van het project.
    * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie van de Adobe Developer Console. Dit is het zelfde [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload.
 
       ```conf
