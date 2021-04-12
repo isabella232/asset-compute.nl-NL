@@ -1,14 +1,14 @@
 ---
 title: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing
 description: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
+exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
-
 
 # Een aangepaste toepassing testen en fouten opsporen {#test-debug-custom-worker}
 
@@ -21,7 +21,7 @@ $ aio app test
 ```
 
 <!-- TBD
-To run tests for a custom application, run `adobe-asset-compute test-worker` command in the root of the custom application application application.
+To run tests for a custom application, run `aio asset-compute test-worker` command at the root of the custom application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
@@ -173,8 +173,8 @@ Veel van deze stappen worden gewoonlijk geautomatiseerd door `aio` uit de doos, 
 1. Voeg aan uw gebruikersinstellingen JSON-bestand toe. Het blijft het oude debugger van de Code van VS gebruiken, nieuw heeft [sommige kwesties](https://github.com/apache/openwhisk-wskdebug/issues/74) met wskdebug: `"debug.javascript.usePreview": false`.
 1. Sluit alle instanties van toepassingen die zijn geopend via `aio app run`.
 1. Implementeer de nieuwste code met `aio app deploy`.
-1. Alleen de Asset compute Ontwikkelen uitvoeren met `npx adobe-asset-compute devtool`. Houd het open.
-1. In de redacteur van de Code van VS, voeg hieronder zuivert configuratie aan uw `launch.json` toe:
+1. Alleen de Asset compute Ontwikkelen uitvoeren met `aio asset-compute devtool`. Houd het open.
+1. In de Redacteur van de Code van VS, voeg de volgende zuivert configuratie aan uw `launch.json` toe:
 
    ```json
    {
@@ -195,7 +195,7 @@ Veel van deze stappen worden gewoonlijk geautomatiseerd door `aio` uit de doos, 
    }
    ```
 
-   Haal de NAAM van de ACTIE uit de uitvoer van `aio app deploy`. Het lijkt op `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker`.
+   Haal `ACTION NAME` uit de uitvoer van `aio app deploy`.
 
 1. Selecteer `wskdebug worker` van de looppas/zuivert configuratie en druk het playbackpictogram. Wacht tot het om te beginnen tot het **[!UICONTROL Klaar voor activering]** in **[!UICONTROL Debug Console]** venster toont.
 
