@@ -1,8 +1,8 @@
 ---
 cloud: Experience Cloud
-product: asset compute service
+product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
-type: Documentatie
+type: Documentation
 role: Developer
 user-guide-title: Handleiding voor asset compute-service
 user-guide-description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
@@ -14,10 +14,10 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: AEM Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 translation-type: tm+mt
-source-git-commit: 1cf682be00c984fa523963f5d4358575efffb50b
+source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 8%
+source-wordcount: '120'
+ht-degree: 6%
 
 ---
 
