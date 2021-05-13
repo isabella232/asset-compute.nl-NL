@@ -2,10 +2,9 @@
 title: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing
 description: Testen en fouten opsporen [!DNL Asset Compute Service] aangepaste toepassing.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
-source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
+source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -137,6 +136,10 @@ tests/
 ### Verwachte fouten testen {#test-unexpected-errors}
 
 Fouttestgevallen mogen geen verwacht `rendition.*`-bestand bevatten en moeten de verwachte `errorReason` in het `params.json`-bestand definiëren.
+
+>[!NOTE]
+>
+>Als een testcase geen verwacht `rendition.*`-bestand bevat en de verwachte `errorReason` in het `params.json`-bestand niet definieert, wordt aangenomen dat dit een foutmelding is met een `errorReason`.
 
 Fout bij testen hoofdletterstructuur:
 
