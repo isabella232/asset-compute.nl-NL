@@ -1,17 +1,16 @@
 ---
-source-git-commit: 324f414164ccbb712e7197ddc68075ea9c238cae
+source-git-commit: 7f59571ebe0d065c4e11cda52718a0febd71b62b
 workflow-type: tm+mt
-translation-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
 
 ---
 # MIT-licentie
 
-© Copyright 2020 Adobe. Alle rechten voorbehouden.
+© Copyright 2021 Adobe. all rights reserved.
 
-Hierbij wordt kosteloos een machtiging verleend aan eenieder die een exemplaar van deze software en de bijbehorende documentatiebestanden (&quot;de Software&quot;) ontvangt, om de Software zonder beperking te behandelen, met inbegrip van zonder beperking het recht om de Software te gebruiken, te kopiëren, te wijzigen, samen te voegen, te publiceren, te verspreiden, onder licentie te geven en/of te verkopen, en aan personen aan wie de Software is geleverd, onder de volgende voorwaarden toe te staan:
+Hierbij wordt kosteloos een machtiging verleend aan eenieder die een kopie van deze software en de bijbehorende documentatiebestanden (de &quot;Software&quot;) ontvangt, om zonder beperking in de Software te handelen, met inbegrip van de rechten om, onder de volgende voorwaarden, kopieën van de Software te gebruiken, te kopiëren, te wijzigen, samen te voegen, te publiceren, te sublicentiëren en/of te verkopen, en om personen aan wie de Software wordt geleverd, toe te staan dit te doen:
 
 De bovenstaande copyrightkennisgeving en deze machtigingskennisgeving worden opgenomen in alle exemplaren of belangrijke delen van de Software.
 
-DE SOFTWARE WORDT &quot;AS IS&quot; VERSTREKT, ZONDER ENIGE GARANTIE, UITDRUKKELIJK GEORIMPLITEERD, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN MERCHANTABILITEIT, PASSENHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL KUNNEN BEDRIJVEN OF HOUDERS VAN COPYRIGHT AANSPRAKELIJK ZIJN VOOR AANVRAGEN, SCHADE OF ANDERE AANSPRAKELIJKHEID, IN EEN ACTIE VAN CONTRACT, TEORT OF ANDERS, DIE VOORTVLOEIEN UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE VERVALSINGEN IN DEZE TWARE.
+DE SOFTWARE WORDT &quot;AS IS&quot; VERSTREKT, ZONDER ENIGE SOORT GARANTIE, UITDRUKKELIJK OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN MERKANTABILITEIT, PLAATSBAARHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL ZIJN DE AUTEURS OF DE HOUDERS VAN HET COPYRIGHT AANSPRAKELIJK VOOR EEN AANVRAAG, SCHADE OF ANDERE AANSPRAKELIJKHEID, OF HET EEN ACTIE VAN CONTRACT, TEORT OF ANDERS IS, DIE VOORTVLOEIT UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK OF ANDERE AFWIJKINGEN IN DE SOFTWARE.
