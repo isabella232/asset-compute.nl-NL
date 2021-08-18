@@ -1,16 +1,15 @@
 ---
 title: '[!DNL Asset Compute Service] HTTP-API'
 description: '[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken.'
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
+source-git-commit: 780ddb7e119a28a1f8cc555ed2f1d3cee543b73f
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Asset Compute Service] HTTP-API  {#asset-compute-http-api}
+# [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
 Het gebruik van de API is beperkt tot ontwikkelingsdoeleinden. De API wordt als context verstrekt wanneer het ontwikkelen van douanetoepassingen. [!DNL Adobe Experience Manager] als  [!DNL Cloud Service] gebruikt de API om de verwerkingsgegevens door te geven aan een aangepaste toepassing. Zie [Elementmicroservices en verwerkingsprofielen gebruiken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) voor meer informatie.
 
@@ -45,7 +44,7 @@ Voor alle API&#39;s is verificatie van toegangstoken vereist. De verzoeken moete
 
 1. `x-api-key` met de client-id van het  [!DNL Adobe Developers Console] project.
 
-### Scopes {#scopes}
+### Segmenten {#scopes}
 
 Verzeker het volgende werkingsgebied voor het toegangstoken:
 
@@ -82,7 +81,7 @@ Elke client van het [!DNL Asset Compute service] - een uniek [!DNL Adobe Develop
 
 Aan het eind van zijn levenscyclus, kan een cliënt [unregister](#unregister-request).
 
-### Verzoek {#register-request} registreren
+### Aanvraag registreren {#register-request}
 
 Met deze API-aanroep wordt een [!DNL Asset Compute]-client ingesteld en wordt de URL van het gebeurtenisdagboek weergegeven. Dit is een epidemische bewerking die slechts één keer voor elke client hoeft te worden uitgevoerd. Het kan opnieuw worden geroepen om het dagboek URL terug te winnen.
 
@@ -139,7 +138,7 @@ De HTTP-statuscodes zijn:
    }
    ```
 
-### Registratieverzoek {#unregister-request} ongedaan maken
+### Aanvraag ongedaan maken {#unregister-request}
 
 Met deze API-aanroep wordt de registratie van een [!DNL Asset Compute]-client ongedaan gemaakt. Hierna is het niet meer mogelijk `/process` aan te roepen. Als u de API-aanroep voor een niet-geregistreerde client of een nog te registreren client gebruikt, wordt een `404`-fout geretourneerd.
 
@@ -151,7 +150,7 @@ Met deze API-aanroep wordt de registratie van een [!DNL Asset Compute]-client on
 | Koptekst `x-request-id` | Optioneel kunnen clients een unieke end-to-end-id instellen voor de verwerkingsverzoeken in verschillende systemen. |
 | Aanvragingsinstantie | Leeg. |
 
-### Reactie {#unregister-response} verwijderen
+### Reactie ongedaan maken {#unregister-response}
 
 | Parameter | Waarde |
 |-----------------------|------------------------------------------------------|
@@ -260,7 +259,7 @@ De `source` kan een `<string>` zijn die als URL wordt gezien of het kan een `<ob
 | `size` | `number` | Bestandsgrootte van bronelement in bytes. Neemt belangrijkheid over `content-length` kopbal van het binaire middel. | `10234` |
 | `mimetype` | `string` | MIME-type voor bronelementbestand. Neemt belangrijkheid over de `content-type` kopbal van het binaire middel. | `"image/jpeg"` |
 
-### Een volledig `process` aanvraagvoorbeeld {#complete-process-request-example}
+### Een volledig `process`-aanvraagvoorbeeld {#complete-process-request-example}
 
 ```json
 {
@@ -347,7 +346,7 @@ De meeste cliënten zijn waarschijnlijk geneigd om het nauwkeurige zelfde verzoe
 
 Alle JSON-reacties (indien aanwezig) bevatten de `requestId` die dezelfde waarde heeft als de `X-Request-Id`-header. Het wordt aanbevolen om van de koptekst te lezen, aangezien deze altijd aanwezig is. `requestId` is ook teruggekeerd in alle gebeurtenissen met betrekking tot verwerkingsverzoeken zoals `requestId`. Clients mogen geen aanname maken over de opmaak van deze tekenreeks, het is een ondoorzichtige tekenreeks-id.
 
-## Aanmelden bij nabewerking {#opt-in-to-post-processing}
+## Inschakelen naar naverwerking {#opt-in-to-post-processing}
 
 De [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk) ondersteunt een set basisopties voor nabewerking van afbeeldingen. Aangepaste workers kunnen zich expliciet aanmelden bij naverwerking door het veld `postProcess` voor het weergaveobject in te stellen op `true`.
 
@@ -377,7 +376,7 @@ Dit zijn de beschikbare opties voor de `renditions`-array in [/process](#process
 | `fmt` | `string` | De doelindeling van uitvoeringen kan ook `text` zijn voor tekstextractie en `xmp` voor het extraheren van XMP metagegevens als xml. Zie [ondersteunde indelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL van een [aangepaste toepassing](develop-custom-application.md). Moet een `https://` URL zijn. Als dit veld aanwezig is, wordt de vertoning gemaakt door een aangepaste toepassing. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP-PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Dit is voor [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [uploadgedrag voor meerdere delen](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: minimumgrootte voor één onderdeel = url</li><li>`maxPartSize`: de maximumgrootte voor één onderdeel = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Dit is voor [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met dit [uploadgedrag voor meerdere delen](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: minimumgrootte voor één onderdeel = url</li><li>`maxPartSize`: de maximumgrootte voor één onderdeel = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optionele gereserveerde ruimte die door de client wordt beheerd en net als weergavegebeurtenissen wordt doorgegeven. Staat cliënten toe om douaneinformatie toe te voegen om vertoningsgebeurtenissen te identificeren. Moet niet worden gewijzigd of vertrouwd op in douanetoepassingen, aangezien de cliënten vrij zijn om dit op elk ogenblik te veranderen. | `{ ... }` |
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
