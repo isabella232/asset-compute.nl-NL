@@ -2,9 +2,9 @@
 title: Stel de ontwikkelomgeving in die vereist is voor [!DNL Asset Compute Service]
 description: Ontwikkelomgeving ingesteld voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
+source-git-commit: 9404ffcc66a3b6ba206155d1b1a5c16a43e22a39
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Als u een installatie wilt maken waarmee u zich kunt ontwikkelen voor [!DNL Asse
    * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installeren met  `npm install -g @adobe/aio-cli@7.1.0`.
 
 1. Zorg ervoor dat u voldoet aan de [voorwaarden](/help/understand-extensibility.md#prerequisites-and-provisioning).
+
+>[!NOTE]
+>
+>Gebruik momenteel [!DNL Adobe I/O] CLI v7.1.0 van en gebruik [!DNL Adobe I/O] CLI v8 niet.
 
 ## Een Firefly-project instellen {#create-firefly-project}
 
