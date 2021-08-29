@@ -1,16 +1,15 @@
 ---
 title: Begrijp over uitbreiden [!DNL Asset Compute Service]
 description: Wanneer en hoe te om  [!DNL Asset Compute Service] functionaliteit uit te breiden om de verwerking van douaneactiva te doen.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-
-# Inleiding rekbaarheid {#introduction-to-extensibilty}
+# Inleiding tot uitbreidbaarheid {#introduction-to-extensibilty}
 
 Veel vereisten voor vertoningen, zoals het omzetten in indelingen en het wijzigen van het formaat van afbeeldingen, worden opgelost door [Profielen verwerken in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). De complexere bedrijfsvereisten kunnen een douane-gecreeerde oplossing vereisen die de behoeften van een organisatie aanpast. [!DNL Asset Compute Service] U kunt deze extensie uitbreiden door aangepaste toepassingen te maken die worden aangeroepen vanuit Procesprofielen in  [!DNL Experience Manager]. Deze douanetoepassingen behandelen aan [gesteunde gebruiksgevallen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
@@ -25,9 +24,9 @@ De aangepaste toepassingen hebben geen kop [Project Firefly](https://github.com/
 Zorg ervoor dat u aan de volgende voorwaarden voldoet:
 
 * De projectprogramma&#39;s zijn geïnstalleerd op uw computer.
-* Een [!DNL Experience Cloud]-organisatie. Meer informatie [hier](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
+* Een [!DNL Experience Cloud]-organisatie. Meer informatie [hier](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials).
 * De ervaringsorganisatie moet [!DNL Experience Manager] hebben als [!DNL Cloud Service] toegelaten.
-* [!DNL Adobe Experience Cloud] organisatie maakt deel uit van het voorvertoningsprogramma voor  [!DNL Project Firefly] ontwikkelaars. Zie [hoe te om voor toegang toe te passen](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
+* [!DNL Adobe Experience Cloud] organisatie maakt deel uit van het voorvertoningsprogramma voor  [!DNL Project Firefly] ontwikkelaars. Zie [hoe te om voor toegang toe te passen](https://www.adobe.io/project-firefly/docs/overview/getting_access/).
 * Verzeker een ontwikkelaarrol of beheerdertoestemmingen in de organisatie voor de ontwikkelaar.
 * Zorg ervoor dat [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) lokaal is geïnstalleerd.
 

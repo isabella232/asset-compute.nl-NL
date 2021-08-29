@@ -1,14 +1,13 @@
 ---
 title: Ontwikkelen voor [!DNL Asset Compute Service]
 description: Creeer douanetoepassingen gebruikend [!DNL Asset Compute Service].
-translation-type: tm+mt
-source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
+exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
-
 
 # Een aangepaste toepassing ontwikkelen {#develop}
 
@@ -18,15 +17,15 @@ Voordat u begint met het ontwikkelen van een aangepaste toepassing:
 * Installeer de [vereiste softwaretools](/help/setup-environment.md#create-dev-environment).
 * Zie [opstelling uw milieu](setup-environment.md) om ervoor te zorgen u bereid bent om een douanetoepassing tot stand te brengen.
 
-## Een aangepaste toepassing {#create-custom-application} maken
+## Een aangepaste toepassing maken {#create-custom-application}
 
 Zorg ervoor om [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) plaatselijk te hebben geïnstalleerd.
 
-1. Als u een aangepaste toepassing wilt maken, [maakt u een Firefly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Om dit te doen, voer `aio app init <app-name>` in uw terminal uit.
+1. Als u een aangepaste toepassing wilt maken, [maakt u een Firefly-app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Om dit te doen, voer `aio app init <app-name>` in uw terminal uit.
 
-   Als u zich nog niet hebt aangemeld, wordt u met deze opdracht gevraagd zich aan te melden bij de [Adobe Developer Console](https://console.adobe.io/) met uw Adobe ID. Zie [hier](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) voor meer informatie over aanmelden vanuit de clip.
+   Als u zich nog niet hebt aangemeld, wordt u met deze opdracht gevraagd zich aan te melden bij de [Adobe Developer Console](https://console.adobe.io/) met uw Adobe ID. Zie [hier](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) voor meer informatie over aanmelden vanuit de clip.
 
-   Adobe raadt u aan zich aan te melden. Als u problemen hebt, volgt u de instructies [om een app te maken zonder u aan te melden.](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)
+   Adobe raadt u aan zich aan te melden. Als u problemen hebt, volgt u de instructies [om een app te maken zonder u aan te melden.](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)
 
 1. Na het programma openen, volg de herinneringen in CLI en selecteer `Organization`, `Project`, en `Workspace` om voor de toepassing te gebruiken. Kies het project en de werkruimte u creeerde toen u [opstelling uw milieu](setup-environment.md).
 
@@ -61,7 +60,7 @@ Zorg ervoor om [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) plaatsel
 
 1. Volg de rest herinneringen en open de nieuwe toepassing in de Code van Visual Studio (of uw favoriete coderedacteur). Het bevat de basiscode en voorbeeldcode voor een aangepaste toepassing.
 
-   Lees hier over de [hoofdcomponenten van een Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+   Lees hier over de [hoofdcomponenten van een Firefly app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
    De sjabloontoepassing gebruikt onze [Asset compute-SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, downloaden en ordenen van toepassingsuitvoeringen, zodat ontwikkelaars alleen de aangepaste toepassingslogica hoeven te implementeren. In de `actions/<worker-name>`-map is het `index.js`-bestand de locatie waar de aangepaste toepassingscode moet worden toegevoegd.
 
@@ -76,7 +75,7 @@ Manual set up of credentials is removed from troubleshooting and best practices 
 If you did not log in, refer to our troubleshooting guide to [set up credentials manually](troubleshooting.md).
 -->
 
-#### Inloggegevens voor opslag ontwikkelgereedschap {#developer-tool-credentials}
+#### Inloggegevens voor opslag van het gereedschap Ontwikkelaar {#developer-tool-credentials}
 
 Het hulpprogramma voor ontwikkelaars dat wordt gebruikt om aangepaste toepassingen te testen met de daadwerkelijke [!DNL Asset Compute service], vereist een cloudopslagcontainer voor het hosten van testbestanden en voor het ontvangen en weergeven van uitvoeringen die door toepassingen worden gegenereerd.
 
@@ -99,7 +98,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 1. Download het bestand vanuit de Adobe Developer Console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als bestandsnaam. Voer een van de volgende handelingen uit:
 
    * Wijzig de naam van het bestand in `console.json` en verplaats het in de hoofdmap van het project.
-   * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie van de Adobe Developer Console. Dit is het zelfde [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload.
+   * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie van de Adobe Developer Console. Dit is het zelfde [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) dossier dat in uw projectwerkruimte wordt gedownload.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -124,7 +123,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 >
 >Het `config.json`-bestand bevat referenties. Voeg vanuit uw project het JSON-bestand toe aan uw `.gitignore`-bestand om te voorkomen dat het wordt gedeeld. Hetzelfde geldt voor de .env- en .aio-bestanden.
 
-## De toepassing {#run-custom-application} uitvoeren
+## De toepassing uitvoeren {#run-custom-application}
 
 Alvorens de toepassing met het Hulpmiddel van de Ontwikkelaar van de Asset compute uit te voeren, vorm behoorlijk [geloofsbrieven](#developer-tool-credentials).
 
@@ -152,7 +151,7 @@ Hieronder vindt u voorbeelden van aangepaste toepassingen:
 * [basisch voor werknemers](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic)
 * [dierenfoto&#39;s van werknemers](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-animal-pictures)
 
-### Aangepaste sjabloontoepassing {#template-custom-application}
+### Aangepaste toepassing sjabloon {#template-custom-application}
 
 De [worker-basic](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-basic) is een sjabloontoepassing. Het produceert een vertoning door het brondossier eenvoudig te kopiëren. De inhoud van deze toepassing is de sjabloon die wordt ontvangen wanneer u `Adobe Asset Compute` kiest bij het maken van de audio-app.
 
@@ -219,11 +218,11 @@ exports.main = worker(async function (source, rendition) {
 
 `example-worker-animal-pictures` gaat een douaneparameter [`animal`](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-animal-pictures/worker-animal-pictures.js#L39) over om te bepalen welk dossier om van Wikimedia te halen.
 
-## Ondersteuning voor verificatie en verificatie {#authentication-authorization-support}
+## Ondersteuning voor verificatie en autorisatie {#authentication-authorization-support}
 
 Standaard worden aangepaste toepassingen voor Asset compute geleverd met verificatie- en verificatiecontroles voor probleemtoepassingen. Dit wordt toegelaten door `require-adobe-auth` annotatie aan `true` in `manifest.yml` te plaatsen.
 
-### Andere Adobe-API&#39;s {#access-adobe-apis} openen
+### Andere Adobe-API&#39;s openen {#access-adobe-apis}
 
 <!-- TBD: Revisit this section. Where do we document console workspace creation?
 -->
@@ -236,7 +235,7 @@ const clientId = params.auth.clientId; // Technical Account client Id
 const orgId = params.auth.orgId; // Experience Cloud Organization
 ```
 
-### Geef geloofsbrieven voor derdesystemen {#pass-credentials-for-tp} door
+### Referenties doorgeven voor systemen van derden {#pass-credentials-for-tp}
 
 Om geloofsbrieven voor andere externe diensten te behandelen, ga deze als standaardparameters over de acties. Deze worden automatisch tijdens de doorvoer versleuteld. Zie [Handelingen maken in de handleiding voor ontwikkelaars van runtimeprogramma](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md) voor meer informatie. Stel ze vervolgens in met behulp van omgevingsvariabelen tijdens de implementatie. Deze parameters zijn toegankelijk in het `params`-object binnen de handeling.
 
@@ -271,7 +270,7 @@ Voor productieplaatsing zou men de milieuvariabelen in het systeem van CI kunnen
 const key = params.secretKey;
 ```
 
-## Toepassingen {#sizing-workers} vergroten/verkleinen
+## Toepassingen vergroten/verkleinen {#sizing-workers}
 
 Een toepassing voert in een container in [!DNL Adobe I/O] Runtime met [grenzen](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) uit die door `manifest.yml` kan worden gevormd:
 
