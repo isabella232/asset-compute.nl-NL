@@ -7,22 +7,15 @@ role: Developer
 user-guide-title: Handleiding voor asset compute-service
 user-guide-description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 breadcrumb-title: Handleiding voor asset compute-service
-breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: AEM Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
-tutorials-title: AEM Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
-translation-type: tm+mt
-source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
+source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '98'
 ht-degree: 6%
 
 ---
 
 
-# Handboek voor asset compute-service {#using}
+# Gebruikershandleiding voor asset compute-service {#using}
 
 + [Gebruikershandleiding voor asset compute Service](home.md)
 + [Overzicht](introduction.md)
