@@ -1,9 +1,8 @@
 ---
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: c0fd9623ad09443a99695352743a165744961758
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '646'
-ht-degree: 5%
+source-wordcount: '648'
+ht-degree: 4%
 
 ---
 # Richtlijnen voor Contribute voor de documentatie
@@ -32,7 +31,7 @@ De uitzonderingen op deze regel zijn versienota&#39;s waar de bekende kwesties m
 
 Alle ideeën die u eventueel nodig hebt om de documentatie te verbeteren, zijn welkom als bijdragen. Opmerkingen, problemen en pull-aanvragen zijn echter alleen bedoeld voor *bijdragen*. Ze zijn niet bedoeld om te worden gebruikt om vragen te beantwoorden over hoe u het product kunt gebruiken, projecten kunt implementeren of technische problemen kunt oplossen.
 
-Vragen over het gebruik of technische fouten die u mogelijk hebt, moeten via het normale supportproces worden gerapporteerd via het [[!DNL Experience Cloud] Enterprise Support-portaal](https://helpx.adobe.com/nl/contact/enterprise-support.ec.html) of worden besproken in de [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Vragen over het gebruik of technische fouten die u mogelijk hebt gemaakt, moeten via het normale supportproces worden gerapporteerd via het [[!DNL Experience Manager] Klantenondersteuningsportaal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) of worden besproken in de [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 De documentatiebijdragen zijn geen vervanging voor de Adobe Customer Care*** en dergelijke bijdragen die antwoorden op supportgerelateerde vragen willen, worden afgewezen.
 
@@ -58,9 +57,9 @@ Door deze richtlijnen te volgen wordt de revisie van uw bijdrage gemakkelijker e
 
 Alle lezers van de documentatie zijn over de hele wereld beschikbaar en kunnen niet verwachten dat ze native of vloeiende Engelstalige luidsprekers zijn. Vermijd colloquialisme en houd de taal zo duidelijk en eenvoudig mogelijk.
 
-#### Handleiding van Microsoft volgen
+#### Handleiding Microsoft volgen
 
-[De handleiding van Microsoft van ](https://docs.microsoft.com/en-us/style-guide/welcome/) stijl is een vrij beschikbare gids van de documentatiestijl die op softwaredocumentatie concentreert.
+[De Microsoft Manual of ](https://docs.microsoft.com/en-us/style-guide/welcome/) Style is een vrij beschikbare documentatiestijlgids die zich richt op softwaredocumentatie.
 
 ### Opmaak
 
