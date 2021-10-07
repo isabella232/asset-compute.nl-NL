@@ -2,10 +2,10 @@
 title: '[!DNL Adobe Asset Compute Service] Handboek'
 description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals inleiding, hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
+source-git-commit: daa13e422e16f5832ad3275e310bd98aa34f6c2f
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 1%
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +18,8 @@ Deze documentatie behandelt [!DNL Asset Compute Service] onderwerpen zoals hoe t
 [!DNL Asset Compute Service] ondersteunt de conversie van vele bestandsindelingen en integreert deze met veel Adobe-services. Zie de lijst met [ondersteunde bestandsindelingen en services-integratie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Zie een overzicht over [mogelijkheden van elementmicroservices beschikbaar in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) en hoe u de microservices kunt gebruiken in [!DNL Experience Manager].
+
+[!DNL Asset Compute Service] de uitbreidbaarheid wordt ontwikkeld in het kader van een open ontwikkelingsmodel op  [github.com/](https://github.com/adobe) adobeb , dat bijdragen van ontwikkelaars van extensies toejuicht . Alle componenten die relevant zijn voor het ontwikkelen, maken, testen en implementeren van aangepaste toepassingen zijn open source. Zie [Hoe en waar u wilt bijdragen aan de Compute Service](contribute-to-compute-service.md).
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
