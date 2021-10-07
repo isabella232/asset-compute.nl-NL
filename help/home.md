@@ -1,14 +1,13 @@
 ---
 title: '[!DNL Adobe Asset Compute Service] Handboek'
 description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals inleiding, hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
-
 
 # Info [!DNL Asset Compute Service]
 
@@ -16,9 +15,7 @@ ht-degree: 1%
 
 Deze documentatie behandelt [!DNL Asset Compute Service] onderwerpen zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen. Als u wilt weten wat [!DNL Asset Compute Service] aanbiedt, raadpleegt u deze [inleiding](introduction.md). Ontdek [wat de service voor u kan doen](introduction.md#possible-use-cases-benefits).
 
-[!DNL Asset Compute Service] ondersteunt de conversie van veel bestandsindelingen en integreert deze met veel Adobe-services. Zie de lijst met [ondersteunde bestandsindelingen en services-integratie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
-
-Zie de [releaseopmerkingen](/help/release-notes.md) voor informatie over de release en wat de meest recente is.
+[!DNL Asset Compute Service] ondersteunt de conversie van vele bestandsindelingen en integreert deze met veel Adobe-services. Zie de lijst met [ondersteunde bestandsindelingen en services-integratie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Zie een overzicht over [mogelijkheden van elementmicroservices beschikbaar in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) en hoe u de microservices kunt gebruiken in [!DNL Experience Manager].
 

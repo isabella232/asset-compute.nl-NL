@@ -1,14 +1,13 @@
 ---
 title: Inleiding aan  [!DNL Asset Compute Service]
 description: '[!DNL Asset Compute Service] is een service voor de verwerking van eigen middelen in de cloud die de complexiteit vermindert en de schaalbaarheid verbetert.'
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
-
 
 # Overzicht van [!DNL Asset Compute Service] {#overview}
 
@@ -48,7 +47,6 @@ Met de webservice [!DNL Asset Compute] kunt u miniaturen genereren voor verschil
 >* [Overzicht van de verwerking van bedrijfsmiddelen met  [!DNL Adobe Experience Manager] onder andere [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) assetmicroservices.
 >* [Documentatie van het project zonder problemen](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [Ondersteunde bestandsindelingen voor verwerking](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
->* [Opmerkingen bij de release van de Asset compute Service](release-notes.md)
 
 
 <!-- **TBD:**
