@@ -1,49 +1,53 @@
 ---
-title: Stel de ontwikkelomgeving in die vereist is voor [!DNL Asset Compute Service]
-description: Ontwikkelomgeving ingesteld voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
+title: De ontwikkelomgeving instellen die vereist is voor [!DNL Asset Compute Service]
+description: Ontwikkelomgeving instellen voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 9404ffcc66a3b6ba206155d1b1a5c16a43e22a39
+source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
 # Een ontwikkelomgeving instellen {#create-dev-environment}
 
-Als u een installatie wilt maken waarmee u zich kunt ontwikkelen voor [!DNL Asset Compute Service], volgt u deze vereisten en instructies.
+Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL Asset Compute Service], volgt u deze vereisten en instructies.
 
-1. [Verkrijg toegang en ](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) geloofsbrieven voor  [!DNL Project Firefly].
+1. [Toegang en referenties ophalen](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) for [!DNL Project Firefly].
 
-1. [Stel de lokale ](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) omgeving en de vereiste gereedschappen in.
+1. [De lokale omgeving instellen](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) en de vereiste gereedschappen.
 
 1. Hier volgen nog enkele gereedschappen die u helpen probleemloos aan de slag te gaan met het ontwikkelen van:
 
-   * [Git](https://git-scm.com/).
-   * [Docker Desktop](https://www.docker.com/get-started).
-   * [NodeJS](https://nodejs.org) (v10 tot v12 LTS, oneven versies worden niet aanbevolen) en  [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan `brew install node` doen om beide te installeren. Anders, download het van [deJS downloadpagina](https://nodejs.org/en/).
-   * winde die voor NodeJS goed is, adviseren wij [de Code van Visual Studio (de Code van VS)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (b.v. debugger) wordt nog niet gesteund.
-   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installeren met  `npm install -g @adobe/aio-cli@7.1.0`.
+   * [Git](https://git-scm.com/)
+   * [Docker-bureaublad](https://www.docker.com/get-started)
+   * [NodeJS](https://nodejs.org) (v12 tot v14 LTS, oneven versies worden niet aanbevolen) en [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan dit doen `brew install node` om beide te installeren. Anders downloadt u het bestand van het [Downloadpagina voor NodeJS](https://nodejs.org/en/)
+   * Een winde die voor NodeJS goed is, adviseren wij [Visual Studio Code (VS Code)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (b.v. debugger) wordt nog niet gesteund
+   * De nieuwste[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
 
-1. Zorg ervoor dat u voldoet aan de [voorwaarden](/help/understand-extensibility.md#prerequisites-and-provisioning).
+   <!-- - install using `npm install -g @adobe/aio-cli@7.1.0` -->
 
+1. Zorg ervoor dat u voldoet aan de [voorwaarden](/help/understand-extensibility.md#prerequisites-and-provisioning)
+
+<!--
 >[!NOTE]
 >
->Gebruik momenteel [!DNL Adobe I/O] CLI v7.1.0 van en gebruik [!DNL Adobe I/O] CLI v8 niet.
+>For now, use [!DNL Adobe I/O] CLI v7.1.0 of and do not use [!DNL Adobe I/O] CLI v8.
+-->
 
-## Een Firefly-project instellen {#create-firefly-project}
+## Een App Builder-project instellen {#create-App-Builder-project}
 
-1. Zorgen voor de rol van systeembeheerder of ontwikkelaar in de organisatie [!DNL Experience Cloud]. Dit wordt opstelling door een systeembeheerder in [Admin Console](https://adminconsole.adobe.com/overview).
+1. Zorgen voor de rol van systeembeheerder of ontwikkelaar in de [!DNL Experience Cloud] organisatie. Dit wordt ingesteld door een systeembeheerder in het [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Log op [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van dezelfde [!DNL Experience Cloud]-organisatie als de [!DNL Experience Manager] als een [!DNL Cloud Service]-integratie. Zie [Consoledocumentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html) voor meer informatie over Adobe Developer Console.
+1. Aanmelden bij [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van hetzelfde [!DNL Experience Cloud] organisatie als [!DNL Experience Manager] als [!DNL Cloud Service] integratie. Voor meer informatie over Adobe Developer Console raadpleegt u [Console-documentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
-1. [Maak een Firefly-project](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Klik **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project van sjabloon]**. Selecteer Firefly. Het leidt tot een nieuw Vuurwerk Project met twee werkruimten: `Production` en `Stage`. Voeg desgewenst extra werkruimten toe, bijvoorbeeld `Development`.
+1. [Een App Builder-project maken](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Klikken **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project uit sjabloon]**. Selecteer App Builder. Het leidt tot een nieuw Project van de Bouwer App met twee werkruimten: `Production` en `Stage`. Aanvullende werkruimten toevoegen, bijvoorbeeld `Development`, indien nodig.
 
-1. Selecteer in het project Firefly een werkruimte en abonneer de services die nodig zijn voor de Asset compute. Klik **Toevoegen aan project** > **API** en voeg `Asset Compute`-, `IO Events`- en `IO Events Management`-services toe. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
+1. In het Project van de Bouwer van de App, selecteer een werkruimte en teken aan de diensten nodig voor Asset compute in. Klikken **Toevoegen aan project** > **API** en toevoegen `Asset Compute`, `IO Events`, en `IO Events Management` diensten. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
 
 ## Volgende stap {#next-step}
 
-Nu uw milieu opstelling is, bent u klaar om [een douanetoepassing te creëren](develop-custom-application.md).
+Nu uw omgeving is ingesteld, kunt u [een aangepaste toepassing maken](develop-custom-application.md).
 
 <!-- More ideas:
  
