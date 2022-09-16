@@ -2,9 +2,9 @@
 title: De werking van een aangepaste toepassing begrijpen
 description: Interne werking van [!DNL Asset Compute Service] een aangepaste toepassing om te begrijpen hoe deze werkt.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Hieronder ziet u een voorbeeld van een aangepaste aanvraag voor de verwerking va
 }
 ```
 
-De [!DNL Asset Compute Service] verzendt de aanvragen voor de uitvoering van de aangepaste toepassing naar de aangepaste toepassing. Er wordt een HTTP-POST gebruikt naar de opgegeven toepassings-URL, de beveiligde webactie-URL van de Project App Builder. Voor alle aanvragen wordt het HTTPS-protocol gebruikt om de gegevensbeveiliging te maximaliseren.
+De [!DNL Asset Compute Service] verzendt de aanvragen voor de uitvoering van de aangepaste toepassing naar de aangepaste toepassing. Er wordt een HTTP-POST gebruikt naar de opgegeven toepassings-URL, de beveiligde webactie-URL van App Builder. Voor alle aanvragen wordt het HTTPS-protocol gebruikt om de gegevensbeveiliging te maximaliseren.
 
 De [asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) die door een douanetoepassing worden gebruikt behandelt het verzoek van de POST van HTTP. Het handelt ook het downloaden van de bron, het uploaden van uitvoeringen, het verzenden [!DNL Adobe I/O] gebeurtenissen en foutafhandeling.
 

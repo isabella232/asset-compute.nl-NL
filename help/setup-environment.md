@@ -2,9 +2,9 @@
 title: De ontwikkelomgeving instellen die vereist is voor [!DNL Asset Compute Service]
 description: Ontwikkelomgeving instellen voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL 
 
    * [Git](https://git-scm.com/)
    * [Docker-bureaublad](https://www.docker.com/get-started)
-   * [NodeJS](https://nodejs.org) (v12 tot v14 LTS, oneven versies worden niet aanbevolen) en [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan dit doen `brew install node` om beide te installeren. Anders downloadt u het bestand van het [Downloadpagina voor NodeJS](https://nodejs.org/en/)
+   * [NodeJS](https://nodejs.org) (v14 LTS, oneven versies worden niet aanbevolen) en [NPM](https://www.npmjs.com). Gebruiker van OSX HomeBrew kan dit doen `brew install node` om beide te installeren. Anders downloadt u het bestand van het [Downloadpagina voor NodeJS](https://nodejs.org/en/)
    * Een winde die voor NodeJS goed is, adviseren wij [Visual Studio Code (VS Code)](https://code.visualstudio.com) aangezien het gesteunde winde voor debugger is. U kunt om het even welke andere winde als coderedacteur gebruiken, maar geavanceerd gebruik (b.v. debugger) wordt nog niet gesteund
    * De nieuwste[[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`)
 
@@ -41,7 +41,7 @@ Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL 
 
 1. Aanmelden bij [Adobe Developer Console](https://console.adobe.io/). Zorg ervoor dat u deel uitmaakt van hetzelfde [!DNL Experience Cloud] organisatie als [!DNL Experience Manager] als [!DNL Cloud Service] integratie. Voor meer informatie over Adobe Developer Console raadpleegt u [Console-documentatie](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
-1. [Een App Builder-project maken](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Klikken **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project uit sjabloon]**. Selecteer App Builder. Het leidt tot een nieuw Project van de Bouwer App met twee werkruimten: `Production` en `Stage`. Aanvullende werkruimten toevoegen, bijvoorbeeld `Development`, indien nodig.
+1. [Een App Builder-project maken](https://developer.adobe.com/app-builder/docs/getting_started/first_app/). Klikken **[!UICONTROL Nieuw project maken]** > **[!UICONTROL Project uit sjabloon]**. Selecteer App Builder. Het leidt tot een nieuw Project van de Bouwer App met twee werkruimten: `Production` en `Stage`. Aanvullende werkruimten toevoegen, bijvoorbeeld `Development`, indien nodig.
 
 1. In het Project van de Bouwer van de App, selecteer een werkruimte en teken aan de diensten nodig voor Asset compute in. Klikken **Toevoegen aan project** > **API** en toevoegen `Asset Compute`, `IO Events`, en `IO Events Management` diensten. Wanneer de eerste API wordt toegevoegd, wordt gevraagd om een persoonlijke sleutel te maken. Sla deze gegevens op uw computer op omdat u deze sleutel nodig hebt om uw aangepaste toepassing met het ontwikkelaarsgereedschap te testen.
 

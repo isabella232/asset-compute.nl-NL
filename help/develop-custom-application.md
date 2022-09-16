@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service]
 description: Aangepaste toepassingen maken met [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Voordat u begint met het ontwikkelen van een aangepaste toepassing:
 
 Zorg ervoor dat u de [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) lokaal geïnstalleerd.
 
-1. Als u een aangepaste toepassing wilt maken, [een App Builder-project maken](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Hiertoe voert u uit `aio app init <app-name>` in uw terminal.
+1. Als u een aangepaste toepassing wilt maken, [een App Builder-project maken](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Hiertoe voert u uit `aio app init <app-name>` in uw terminal.
 
-   Als u zich nog niet hebt aangemeld, wordt u met deze opdracht gevraagd zich aan te melden bij de [Adobe Developer Console](https://console.adobe.io/) met uw Adobe ID. Zie [hier](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) voor meer informatie over aanmelden via de cli.
+   Als u zich nog niet hebt aangemeld, wordt u met deze opdracht gevraagd zich aan te melden bij de [Adobe Developer Console](https://console.adobe.io/) met uw Adobe ID. Zie [hier](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) voor meer informatie over aanmelden via de cli.
 
-   Adobe raadt u aan zich aan te melden. Als u problemen hebt, volgt u de instructies [om een app te maken zonder u aan te melden](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe raadt u aan zich aan te melden. Als u problemen hebt, volgt u de instructies [om een app te maken zonder u aan te melden](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Na het programma openen, volg de herinneringen in CLI en selecteer `Organization`, `Project`, en `Workspace` gebruiken voor de toepassing. Kies het project en de werkruimte u creeerde toen u [uw omgeving instellen](setup-environment.md). Als dit wordt gevraagd `Which extension point(s) do you wish to implement ?`, zorg ervoor dat u `DX Asset Compute Worker`:
 
@@ -62,7 +62,7 @@ Zorg ervoor dat u de [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) lo
 
 1. Volg de rest herinneringen en open de nieuwe toepassing in de Code van Visual Studio (of uw favoriete coderedacteur). Het bevat de basiscode en voorbeeldcode voor een aangepaste toepassing.
 
-   Lees hier over de [hoofdcomponenten van een App Builder-app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+   Lees hier over de [hoofdcomponenten van een App Builder-app](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    De sjabloontoepassing gebruikt onze [asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) voor het uploaden, downloaden en ordenen van toepassingsuitvoeringen hoeven ontwikkelaars alleen de aangepaste toepassingslogica te implementeren. Binnen de `actions/<worker-name>` map, de `index.js` In dit bestand kunt u de aangepaste toepassingscode toevoegen.
 
