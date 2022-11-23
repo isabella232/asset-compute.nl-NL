@@ -1,30 +1,29 @@
 ---
 title: Implementeren [!DNL Asset Compute Service] aangepaste toepassing
-description: Implementeer [!DNL Asset Compute Service] aangepaste toepassing.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+description: Implementeren [!DNL Asset Compute Service] aangepaste toepassing.
+exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
+source-git-commit: 129651ba432b75703bc27baa7081da60302f828d
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# Een aangepaste toepassing implementeren {#deploy-custom-application}
 
-# Een aangepaste toepassing {#deploy-custom-application} implementeren
+Om uw toepassing op te stellen, gebruik [Implementatie van een aio-app](https://github.com/adobe/aio-cli#aio-appdeploy) gebruiken. In de terminal geeft de opdracht een URL weer voor toegang tot de aangepaste toepassing. De URL heeft de notatie `https://[namespace].adobeio-static.net/api/v1/web/[appname]-[appversion]/[workername]`.
 
-Als u uw toepassing wilt implementeren, gebruikt u de opdracht [aio-app implementeren](https://github.com/adobe/aio-cli#aio-appdeploy). In de terminal geeft de opdracht een URL weer voor toegang tot de aangepaste toepassing. De URL heeft de notatie `https://[namespace].adobeio-static.net/api/v1/web/[appname]-[appversion]/[workername]`.
+Als u dezelfde URL wilt ophalen zonder de toepassing opnieuw te implementeren, gebruikt u [`aio app get-url`](https://github.com/adobe/aio-cli#aio-app-get-url-action) gebruiken.
 
-Als u dezelfde URL wilt ophalen zonder de toepassing opnieuw te implementeren, gebruikt u de opdracht [`aio app get-url`](https://github.com/adobe/aio-cli#aio-appget-url-action).
+Gebruik de URL in een [Profiel verwerken in [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) om uw toepassing te integreren met [!DNL Experience Manager] als [!DNL Cloud Service].
 
-Gebruik de URL in een [Verwerkingsprofiel in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) om uw toepassing met [!DNL Experience Manager] als [!DNL Cloud Service] te integreren.
-
-Zorg ervoor dat uw Firefly-project en -werkruimte overeenkomen met de [!DNL Experience Manager] als een [!DNL Cloud Service]-omgeving waarin u de handeling wilt gebruiken. Het heeft verschillende omgevingen voor ontwikkeling, staging en productie. U kunt de omgeving controleren door `AIO_runtime_*` referenties te controleren die in het ENV-bestand in de hoofdmap van uw Firefly-toepassing zijn gedefinieerd. Als u bijvoorbeeld wilt implementeren in een `Stage`-werkruimte, heeft de `AIO_runtime_namespace` de notatie `xxxxxx_xxxxxxxxx_stage`. Als u wilt integreren met [!DNL Experience Manager] als een [!DNL Cloud Service]-productieomgeving, gebruikt u toepassings-URL&#39;s uit uw werkruimte Firefly `Production`.
+Zorg ervoor dat uw project en de werkruimte van de Bouwer App met het project en de [!DNL Experience Manager] als [!DNL Cloud Service] omgeving waarin u de handeling wilt gebruiken. Het heeft verschillende omgevingen voor ontwikkeling, staging en productie. U kunt de omgeving controleren door `AIO_runtime_*` referenties die in het ENV-bestand in de hoofdmap van de Firefly-toepassing zijn gedefinieerd. Bijvoorbeeld, om aan `Stage` werkruimte, de `AIO_runtime_namespace` heeft de notatie `xxxxxx_xxxxxxxxx_stage`. Om te integreren met [!DNL Experience Manager] als [!DNL Cloud Service] Productieomgeving, toepassings-URL&#39;s uit uw Firefly gebruiken `Production` werkruimte.
 
 >[!CAUTION]
 >
->Gebruik geen persoonlijke werkruimte op kritieke [!DNL Experience Manager] milieu&#39;s.
+>Gebruik geen persoonlijke werkruimte voor kritieke toepassingen [!DNL Experience Manager] omgevingen.
 
 >[!MORELIKETHIS]
 >
->* [Begrijp en beheer omgevingen  [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html).
+>* [Omgevingen begrijpen en beheren in [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html).
 
