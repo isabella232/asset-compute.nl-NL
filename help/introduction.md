@@ -1,10 +1,10 @@
 ---
 title: Inleiding tot de [!DNL Asset Compute Service]
-description: '"[!DNL Asset Compute Service] is een service voor de verwerking van eigen middelen in de cloud die de complexiteit vermindert en de schaalbaarheid verbetert."'
+description: "[!DNL Asset Compute Service] is een service voor de verwerking van eigen middelen in de cloud die de complexiteit vermindert en de schaalbaarheid verbetert."
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
-source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 [!DNL Asset Compute Service] is de scalable en verlengbare dienst van [!DNL Adobe Experience Cloud] om digitale elementen te verwerken. Het kan beeld, video, document, en andere dossierformaten in verschillende vertoningen met inbegrip van duimnagels, gehaalde tekst en meta-gegevens, en archieven omzetten.
 
-Ontwikkelaars kunnen aangepaste middelentoepassingen (ook wel aangepaste workers genoemd) insluiten om aangepaste gebruiksgevallen aan te pakken. De service werkt op de [!DNL Adobe I/O] runtime. Het kan worden uitgebreid door [!DNL Project Firefly] toepassingen zonder kop geschreven in Node.js. Deze kunnen aangepaste bewerkingen uitvoeren, zoals het aanroepen van externe API&#39;s voor het uitvoeren van afbeeldingsbewerkingen of het gebruiken van [!DNL Adobe Sensei] ondersteuning.
+Ontwikkelaars kunnen aangepaste middelentoepassingen (ook wel aangepaste workers genoemd) insluiten om aangepaste gebruiksgevallen aan te pakken. De service werkt op de [!DNL Adobe I/O] runtime. Het kan worden uitgebreid door [!DNL Adobe Developer App Builder] toepassingen zonder kop geschreven in Node.js. Deze kunnen aangepaste bewerkingen uitvoeren, zoals het aanroepen van externe API&#39;s voor het uitvoeren van afbeeldingsbewerkingen of het gebruiken van [!DNL Adobe Sensei] ondersteuning.
 
-[!DNL Project Firefly] is een framework voor het ontwikkelen en implementeren van aangepaste webtoepassingen op [!DNL Adobe I/O] om Adobe Experience Cloud-oplossingen uit te breiden. Om aangepaste toepassingen te maken, kunnen ontwikkelaars [!DNL React Spectrum] (UI toolkit van Adobe), creeer microservices, creeer douanegebeurtenissen, en orkest APIs. Zie [documentatie van Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Adobe Developer App Builder] is een framework voor het ontwikkelen en implementeren van aangepaste webtoepassingen op [!DNL Adobe I/O] om Adobe Experience Cloud-oplossingen uit te breiden. Om aangepaste toepassingen te maken, kunnen ontwikkelaars [!DNL React Spectrum] (UI toolkit van Adobe), creeer microservices, creeer douanegebeurtenissen, en orkest APIs. Zie [documentatie van Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ U kunt [!DNL Asset Compute] webservice voor het genereren van miniaturen voor ve
 >[!MORELIKETHIS]
 >
 >* [Overzicht van de verwerking van bedrijfsmiddelen met assetmicroservices in [!DNL Adobe Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
->* [Documentatie van het project probleemloos](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+>* [Documentatie over Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
 >* [Ondersteunde bestandsindelingen voor verwerking](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 

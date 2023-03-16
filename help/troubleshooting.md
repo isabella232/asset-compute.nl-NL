@@ -1,10 +1,10 @@
 ---
 title: Problemen oplossen [!DNL Asset Compute Service]
-description: Los en zuiver douanetoepassingen problemen op gebruikend [!DNL Asset Compute Service].
+description: Aangepaste toepassingen oplossen en fouten opsporen met [!DNL Asset Compute Service].
 exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '291'
 ht-degree: 1%
 
 ---
@@ -14,21 +14,21 @@ ht-degree: 1%
 Enkele algemene tips voor het oplossen van problemen die u kunnen helpen problemen op te lossen met de service Asset compute zijn:
 
 * Zorg ervoor dat de JavaScript-toepassing niet vastloopt bij het opstarten. Dergelijke neerstortingen zijn gewoonlijk verwant aan een ontbrekende bibliotheek of een gebiedsdeel.
-* Zorg ervoor dat in het `package.json`-bestand van de toepassing naar alle te installeren afhankelijkheden wordt verwezen.
+* Zorg ervoor dat in de toepassing wordt verwezen naar alle afhankelijkheden die moeten worden geïnstalleerd `package.json` bestand.
 * Verzeker om het even welke fouten die uit schoonmaakbeurt bij mislukking kunnen voortkomen niet hun eigen fouten produceren die het originele probleem verbergen.
 
-* Wanneer het beginnen van het ontwikkelaarshulpmiddel voor het eerst met nieuwe [!DNL Asset Compute Service] integratie, kan het het eerste verwerkingsverzoek ontbreken als het Dagboek van de Gebeurtenissen van de Asset compute niet volledig opstelling is. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
-* Als er fouten optreden bij het verzenden van Asset compute `/register`- of `/process`-aanvragen, moet u ervoor zorgen dat alle benodigde API&#39;s worden toegevoegd aan het [!DNL Adobe I/O]-project en de werkruimte—dat wil zeggen, Asset compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management en [!DNL Adobe I/O] Runtime.
+* Wanneer u het ontwikkelaarsgereedschap voor het eerst start met een nieuwe [!DNL Asset Compute Service] het eerste verwerkingsverzoek mislukt als het Asset compute Events Journal niet volledig is ingesteld. Wacht enige tijd op het dagboek aan opstelling alvorens een ander verzoek te verzenden.
+* Als er fouten optreden bij het verzenden van Asset compute `/register` of `/process` aanvragen, zorg ervoor dat alle noodzakelijke API&#39;s worden toegevoegd aan de [!DNL Adobe I/O] Project en werkruimte: Asset compute, [!DNL Adobe I/O] gebeurtenissen, [!DNL Adobe I/O] Events Management en [!DNL Adobe I/O] Runtime.
 
-## Problemen met aanmelden via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
+## Aanmeldingsproblemen via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
-Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [door  [!DNL Adobe I/O] CLI](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) hebt, dan voeg manueel de geloofsbrieven toe die voor het ontwikkelen, het testen, en het opstellen van uw douanetoepassing worden vereist:
+Als u problemen hebt met het aanmelden bij de [!DNL Adobe Developer Console] [via de [!DNL Adobe I/O] CLI](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli)Voeg vervolgens handmatig de vereiste gegevens toe voor het ontwikkelen, testen en implementeren van uw aangepaste toepassing:
 
-1. Navigeer naar uw Firefly-project en -werkruimte op de [Adobe Developer Console](https://console.adobe.io/) en druk **[!UICONTROL Download]** in de rechterbovenhoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
+1. Ga naar uw Adobe Developer App Builder-project en -werkruimte op het tabblad [Adobe Developer Console](https://console.adobe.io/) en drukken **[!UICONTROL Downloaden]** in de rechterbovenhoek. Open dit bestand en sla deze JSON op een veilige plaats op uw computer op.
 
-1. Navigeer naar het ENV-bestand in uw Firefly-toepassing.
+1. Navigeer naar het ENV-bestand in de Adobe Developer App Builder-toepassing.
 
-1. Voeg de [!DNL Adobe I/O] Runtime Credentials toe. Download de [!DNL Adobe I/O] A Runtime geloofsbrieven van gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime`. Voeg de [!DNL Adobe I/O] geloofsbrieven van Runtime in `AIO_runtime_XXX` variabelen toe:
+1. Voeg de [!DNL Adobe I/O] Runtimereferenties. Krijg de [!DNL Adobe I/O] A Runtime geloofsbrieven van gedownloade JSON. De referenties zijn onder `project.workspace.services.runtime`. Voeg de [!DNL Adobe I/O] Runtimegegevens in het dialoogvenster `AIO_runtime_XXX` variabelen:
 
    ```json
    AIO_runtime_auth=
@@ -41,7 +41,7 @@ Als u kwesties het programma openen aan [!DNL Adobe Developer Console] [door  [!
        ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
-1. Stel de overige [vereiste referenties](develop-custom-application.md) in die nodig zijn voor het ontwikkelaarsgereedschap.
+1. De rest van de [vereiste referenties](develop-custom-application.md) nodig is voor het ontwikkelaarsgereedschap.
 
 <!-- TBD for later:
 Add any best practices for developers in this section:

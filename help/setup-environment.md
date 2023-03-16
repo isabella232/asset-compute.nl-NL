@@ -2,9 +2,9 @@
 title: De ontwikkelomgeving instellen die vereist is voor [!DNL Asset Compute Service]
 description: Ontwikkelomgeving instellen voor [!DNL Asset Compute Service] om aangepaste code te maken en te testen.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Om een opstelling tot stand te brengen die u toestaat te ontwikkelen voor [!DNL Asset Compute Service], volgt u deze vereisten en instructies.
 
-1. [Toegang en referenties ophalen](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) for [!DNL Project Firefly].
+1. [Toegang en referenties ophalen](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) for [!DNL Adobe Developer App Builder].
 
-1. [De lokale omgeving instellen](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) en de vereiste gereedschappen.
+1. [De lokale omgeving instellen](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) en de vereiste gereedschappen.
 
 1. Hier volgen nog enkele gereedschappen die u helpen probleemloos aan de slag te gaan met het ontwikkelen van:
 

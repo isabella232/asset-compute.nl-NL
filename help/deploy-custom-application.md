@@ -2,9 +2,9 @@
 title: Implementeren [!DNL Asset Compute Service] aangepaste toepassing
 description: Implementeren [!DNL Asset Compute Service] aangepaste toepassing.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
-source-git-commit: 129651ba432b75703bc27baa7081da60302f828d
+source-git-commit: 50f69e16772cee7f79a812f2b86f0ef0221db369
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Als u dezelfde URL wilt ophalen zonder de toepassing opnieuw te implementeren, g
 
 Gebruik de URL in een [Profiel verwerken in [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) om uw toepassing te integreren met [!DNL Experience Manager] als [!DNL Cloud Service].
 
-Zorg ervoor dat uw project en de werkruimte van de Bouwer App met het project en de [!DNL Experience Manager] als [!DNL Cloud Service] omgeving waarin u de handeling wilt gebruiken. Het heeft verschillende omgevingen voor ontwikkeling, staging en productie. U kunt de omgeving controleren door `AIO_runtime_*` referenties die in het ENV-bestand in de hoofdmap van de Firefly-toepassing zijn gedefinieerd. Bijvoorbeeld, om aan `Stage` werkruimte, de `AIO_runtime_namespace` heeft de notatie `xxxxxx_xxxxxxxxx_stage`. Om te integreren met [!DNL Experience Manager] als [!DNL Cloud Service] Productieomgeving, toepassings-URL&#39;s uit uw Firefly gebruiken `Production` werkruimte.
+Zorg ervoor dat uw project en de werkruimte van de Bouwer App met het project en de [!DNL Experience Manager] als [!DNL Cloud Service] omgeving waarin u de handeling wilt gebruiken. Het heeft verschillende omgevingen voor ontwikkeling, staging en productie. U kunt de omgeving controleren door `AIO_runtime_*` referenties die in uw ENV-bestand zijn gedefinieerd in de hoofdmap van uw Adobe Developer App Builder-toepassing. Bijvoorbeeld, om aan `Stage` werkruimte, de `AIO_runtime_namespace` heeft de notatie `xxxxxx_xxxxxxxxx_stage`. Om te integreren met [!DNL Experience Manager] als [!DNL Cloud Service] Productieomgeving, toepassings-URL&#39;s uit uw Adobe Developer App Builder gebruiken `Production` werkruimte.
 
 >[!CAUTION]
 >

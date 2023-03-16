@@ -1,17 +1,17 @@
 ---
-title: '"[!DNL Adobe Asset Compute Service] Handboek"'
+title: "[!DNL Adobe Asset Compute Service] Handboek"
 description: Deze documentatie behandelt [!DNL Asset Compute Service] taken zoals inleiding, hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
 # Info [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] is een schaalbare en uitbreidbare service van Adobe Experience Cloud voor het verwerken van digitale middelen. U kunt afbeeldingen, video, documenten en andere bestandsindelingen transformeren in verschillende uitvoeringen, zoals miniaturen, uitgenomen tekst en metagegevens, archieven en nog veel meer. Ontwikkelaars kunnen aangepaste toepassingen (ook wel aangepaste workers genoemd) insluiten om aangepaste gebruiksgevallen aan te pakken die zijn gemaakt met [Project onbedoeld](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) en wordt uitgevoerd in serverless [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] is een schaalbare en uitbreidbare service van Adobe Experience Cloud voor het verwerken van digitale middelen. U kunt afbeeldingen, video, documenten en andere bestandsindelingen transformeren in verschillende uitvoeringen, zoals miniaturen, uitgenomen tekst en metagegevens, archieven en nog veel meer. Ontwikkelaars kunnen aangepaste toepassingen (ook wel aangepaste workers genoemd) insluiten om aangepaste gebruiksgevallen aan te pakken die zijn gemaakt met [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview) en wordt uitgevoerd in serverless [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 Deze documentatie behandelt [!DNL Asset Compute Service] onderwerpen zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen. Om te weten wat [!DNL Asset Compute Service] aanbieding is, zie dit [inleiding](introduction.md). Uitchecken [wat de dienst voor u kan doen](introduction.md#possible-use-cases-benefits).
 

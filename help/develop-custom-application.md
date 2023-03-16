@@ -2,9 +2,9 @@
 title: Ontwikkelen voor [!DNL Asset Compute Service]
 description: Aangepaste toepassingen maken met [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Zorg ervoor dat u de [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) lo
    $ aio app init <app-name>
    Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
-   ? Select Project MyFireflyProject
+   ? Select Project MyAdobe Developer App BuilderProject
    ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
    to toggle all, <i> to invert selection)
    ❯◯ DX Experience Cloud SPA
@@ -100,7 +100,7 @@ Voeg de volgende geloofsbrieven voor het ontwikkelaarshulpmiddel aan het ENV dos
 1. Download het bestand uit de Adobe Developer-console. Ga naar de hoofdmap van het project en klik op Alles downloaden rechtsboven in het scherm. Het bestand wordt gedownload met `<namespace>-<workspace>.json` als de bestandsnaam. Voer een van de volgende handelingen uit:
 
    * De naam van het bestand wijzigen als `console.json` en verplaatst u het in de hoofdmap van uw project.
-   * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie in Adobe Developer Console. Dit is hetzelfde [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) bestand dat wordt gedownload in uw projectwerkruimte.
+   * U kunt desgewenst het absolute pad toevoegen aan het JSON-bestand voor integratie in Adobe Developer Console. Dit is hetzelfde [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) bestand dat wordt gedownload in uw projectwerkruimte.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
