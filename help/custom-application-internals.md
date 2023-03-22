@@ -2,9 +2,9 @@
 title: De werking van een aangepaste toepassing begrijpen
 description: Interne werking van [!DNL Asset Compute Service] een aangepaste toepassing om te begrijpen hoe deze werkt.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Gebruik de volgende illustratie om inzicht te krijgen in de end-to-end workflow wanneer een digitaal element wordt verwerkt met een aangepaste toepassing van een client.
 
-![Aangepaste workflow voor toepassingen](assets/customworker.png)
+![Aangepaste workflow voor toepassingen](assets/customworker.svg)
 
 *Afbeelding: Stappen die nodig zijn om een middel te verwerken [!DNL Asset Compute Service].*
 
