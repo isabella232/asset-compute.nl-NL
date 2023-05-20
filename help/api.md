@@ -1,11 +1,11 @@
 ---
-title: '"[!DNL Asset Compute Service] HTTP-API"'
-description: '"[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken."'
+title: "[!DNL Asset Compute Service] HTTP-API"
+description: "[!DNL Asset Compute Service] HTTP-API om aangepaste toepassingen te maken."
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
 workflow-type: tm+mt
 source-wordcount: '2906'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ De [@adobe/asset-compute-client](https://github.com/adobe/asset-compute-client) 
 
 Voor alle API&#39;s is verificatie van toegangstoken vereist. De verzoeken moeten de volgende kopballen plaatsen:
 
-1. `Authorization` header met token aan toonder, de token van een technische account, ontvangen via [JWT-uitwisseling](https://www.adobe.io/authentication/auth-methods.html) van Adobe Developer Console-project. De [bereik](#scopes) worden hieronder beschreven.
+1. `Authorization` header met token aan toonder, de token van een technische account, ontvangen via [JWT-uitwisseling](https://www.adobe.io/authentication/auth-methods.html) uit Adobe Developer Console-project. De [bereik](#scopes) worden hieronder beschreven.
 
 <!-- TBD: Change the existing URL to a new path when a new path for docs is available. The current path contains master word that is not an inclusive term. Logged ticket in Adobe I/O's GitHub repo to get a new URL.
 -->
@@ -115,7 +115,7 @@ De HTTP-statuscodes zijn:
 
 * **401 Niet-geautoriseerd**: komt voor wanneer het verzoek ongeldig is [verificatie](#authentication-and-authorization). Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
 
-* **403 Verboden**: komt voor wanneer het verzoek ongeldig is [autorisatie](#authentication-and-authorization). Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het project van de Console van de Ontwikkelaar van Adobe (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **403 Verboden**: komt voor wanneer het verzoek ongeldig is [autorisatie](#authentication-and-authorization). Een voorbeeld kan een geldig toegangstoken zijn, maar het project van de Console van Adobe Developer (technische rekening) wordt niet geabonneerd aan alle vereiste diensten.
 
 * **429 Te veel verzoeken**: treedt op wanneer het systeem door deze cliënt of anders wordt overbelast. Clients moeten het opnieuw proberen met een [exponentiële backoff](https://en.wikipedia.org/wiki/Exponential_backoff). Het lichaam is leeg.
 * **4xx-fout**: Als er een andere clientfout is opgetreden en registratie is mislukt. Gewoonlijk wordt een JSON-reactie als deze geretourneerd, hoewel dat niet voor alle fouten wordt gegarandeerd:
@@ -171,7 +171,7 @@ De statuscodes zijn:
 
 * **401 Niet-geautoriseerd**: komt voor wanneer het verzoek ongeldig is [verificatie](#authentication-and-authorization). Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
 
-* **403 Verboden**: komt voor wanneer het verzoek ongeldig is [autorisatie](#authentication-and-authorization). Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het project van de Console van de Ontwikkelaar van Adobe (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **403 Verboden**: komt voor wanneer het verzoek ongeldig is [autorisatie](#authentication-and-authorization). Een voorbeeld kan een geldig toegangstoken zijn, maar het project van de Console van Adobe Developer (technische rekening) wordt niet geabonneerd aan alle vereiste diensten.
 
 * **404 Niet gevonden**: komt voor wanneer er geen huidige registratie voor de bepaalde geloofsbrieven is.
 
@@ -320,7 +320,7 @@ Statuscodes:
    ```
 
 * **401 Niet-geautoriseerd**: Wanneer de aanvraag niet geldig is [verificatie](#authentication-and-authorization). Een voorbeeld kan een ongeldige toegangstoken of een ongeldige API-sleutel zijn.
-* **403 Verboden**: Wanneer de aanvraag niet geldig is [autorisatie](#authentication-and-authorization). Een voorbeeld zou een geldig toegangstoken kunnen zijn, maar het project van de Console van de Ontwikkelaar van Adobe (technische rekening) wordt niet ingetekend aan alle vereiste diensten.
+* **403 Verboden**: Wanneer de aanvraag niet geldig is [autorisatie](#authentication-and-authorization). Een voorbeeld kan een geldig toegangstoken zijn, maar het project van de Console van Adobe Developer (technische rekening) wordt niet geabonneerd aan alle vereiste diensten.
 * **429 Te veel verzoeken**: Wanneer het systeem door deze client of in het algemeen wordt overbelast. De clients kunnen het opnieuw proberen met een [exponentiële backoff](https://en.wikipedia.org/wiki/Exponential_backoff). Het lichaam is leeg.
 * **4xx-fout**: Wanneer er een andere clientfout is opgetreden. Gewoonlijk wordt een JSON-reactie als deze geretourneerd, hoewel dat niet voor alle fouten wordt gegarandeerd:
 
@@ -376,7 +376,7 @@ Dit zijn de beschikbare opties voor de `renditions` array in [/process](#process
 | `fmt` | `string` | De doelindeling van uitvoeringen kan ook `text` voor tekstextractie en `xmp` voor het extraheren van XMP metagegevens als xml. Zie [ondersteunde indelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL van een [aangepaste toepassing](develop-custom-application.md). Moet een `https://` URL. Als dit veld aanwezig is, wordt de vertoning gemaakt door een aangepaste toepassing. Een ander setveld voor uitvoering wordt vervolgens gebruikt in de aangepaste toepassing. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL waarnaar de gegenereerde uitvoering moet worden geüpload met HTTP-PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Dit is bedoeld voor [Binair uploaden van AEM/Eak](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met [uploadgedrag voor meerdere delen](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fields:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: minimumgrootte voor één onderdeel = url</li><li>`maxPartSize`: de maximumgrootte voor één onderdeel = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Vooraf ondertekende URL met meerdere delen uploadgegevens voor de gegenereerde uitvoering. Dit is bedoeld voor [Binair uploaden van AEM/Eak](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) met [uploadgedrag voor meerdere delen](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Velden:<ul><li>`urls`: array van tekenreeksen, één voor elke vooraf ondertekende deel-URL</li><li>`minPartSize`: minimumgrootte voor één onderdeel = url</li><li>`maxPartSize`: de maximumgrootte voor één onderdeel = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Optionele gereserveerde ruimte die door de client wordt beheerd en net als weergavegebeurtenissen wordt doorgegeven. Staat cliënten toe om douaneinformatie toe te voegen om vertoningsgebeurtenissen te identificeren. Moet niet worden gewijzigd of vertrouwd op in douanetoepassingen, aangezien de cliënten vrij zijn om dit op elk ogenblik te veranderen. | `{ ... }` |
 
 ### Vertoningsspecifieke velden {#rendition-specific-fields}
@@ -394,7 +394,7 @@ Voor een lijst met momenteel ondersteunde bestandsindelingen raadpleegt u [onder
 | `xmp` | `string` | Wordt alleen gebruikt door XMP terugverwijzing van metagegevens. Het is XMP base64 gecodeerd om terug te schrijven naar de opgegeven uitvoering. |  |
 | `interlace` | `bool` | Geïnterlinieerde PNG- of GIF- of progressieve JPEG maken door deze in te stellen op `true`. Dit heeft geen invloed op andere bestandsindelingen. |  |
 | `jpegSize` | `number` | De grootte van het JPEG-bestand in bytes wordt benaderd. Alle `quality` instellen. Heeft geen effect op andere indelingen. |  |
-| `dpi` | `number` or `object` | Stel de DPI voor x en y in. Voor de eenvoud kan de waarde ook worden ingesteld op één getal dat voor zowel x als y wordt gebruikt. Dit heeft geen invloed op de afbeelding zelf. | `96` of `{ xdpi: 96, ydpi: 96 }` |
+| `dpi` | `number` of `object` | Stel de DPI voor x en y in. Voor de eenvoud kan de waarde ook worden ingesteld op één getal dat voor zowel x als y wordt gebruikt. Dit heeft geen invloed op de afbeelding zelf. | `96` of `{ xdpi: 96, ydpi: 96 }` |
 | `convertToDpi` | `number` of `object` | x- en y-DPI-waarden opnieuw samplen terwijl de fysieke grootte behouden blijft. Voor de eenvoud kan de waarde ook worden ingesteld op één getal dat voor zowel x als y wordt gebruikt. | `96` of `{ xdpi: 96, ydpi: 96 }` |
 | `files` | `array` | Lijst met bestanden die moeten worden opgenomen in het ZIP-archief (`fmt=zip`). Elk item kan een URL-tekenreeks zijn of een object met de velden:<ul><li>`url`: URL om bestand te downloaden</li><li>`path`: Bestand onder dit pad opslaan in ZIP</li></ul> | `[{ "url": "https://host/asset.jpg", "path": "folder/location/asset.jpg" }]` |
 | `duplicate` | `string` | Dubbele verwerking voor ZIP-archieven (`fmt=zip`). Standaard wordt een fout gegenereerd bij meerdere bestanden die in het ZIP-bestand onder hetzelfde pad zijn opgeslagen. Instelling `duplicate` tot `ignore` resulteert alleen in het eerste element dat moet worden opgeslagen en de rest die moet worden genegeerd. | `ignore` |

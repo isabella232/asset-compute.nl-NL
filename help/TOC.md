@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Assets
 type: Documentation
 role: Developer
 user-guide-title: Handleiding voor asset compute-service
-user-guide-description: Deze documentatie behandelt  [!DNL Asset Compute Service] taken zoals hoe te om, uw douanecode te ontwikkelen te beheren op te stellen en problemen op te lossen.
+user-guide-description: Deze documentatie behandelt [!DNL Asset Compute Service] taken zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen.
 breadcrumb-title: Handleiding voor asset compute-service
 source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
@@ -22,13 +22,13 @@ ht-degree: 6%
 + [Ondersteunde bestandsindelingen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Architectuur](architecture.md)
 + [API-verwijzingen](api.md)
-+ Service voor Asset compute uitbreiden {#extend}
++ Asset compute-service uitbreiden {#extend}
    + [Info over het uitbreiden van de Compute Service](understand-extensibility.md)
    + [De omgeving instellen](setup-environment.md)
    + [De interne concepten van een app begrijpen](custom-application-internals.md)
    + [Een aangepaste toepassing ontwikkelen](develop-custom-application.md)
    + [Een aangepaste toepassing testen](test-custom-application.md)
    + [Een aangepaste toepassing implementeren](deploy-custom-application.md)
-   + [Integreer en gebruik  [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [Integreer en gebruik in [!DNL Experience Manager] als [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [Problemen oplossen](troubleshooting.md)
 + [Bijdragen aan het open-source-project](contribute-to-compute-service.md)
