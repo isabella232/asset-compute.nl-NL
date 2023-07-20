@@ -8,12 +8,13 @@ getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-
 tutorials-title: Tutorials
 tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
 mini-toc-levels: 2
+feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.nl-NL
 index: y
-source-git-commit: 5f987f28fdf8d074ceb6226d21a5f64aad67bf04
+source-git-commit: 66bad4afdc7b08e1e91418ec320b061e47c3683d
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 1%
 
 Het bestand metadata.md bevat metagegevens op repo-niveau die worden doorgegeven aan de bestanden in de repo in de gebruikershandleiding TOC.md. Als u de inhoud metadata.md voor om het even welke gebruikersgids wilt veranderen, doe dit in om het even welk dossier van TOC.md.
 
-| metadata | wat het doet |
+| metagegevens | wat het doet |
 |--- |--- |
 | titel oplossing | Gebruikt in artikelkoptekst als koppeling |
 | oplossing-hub-url | Opent de pagina van de steunhub |

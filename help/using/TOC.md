@@ -4,10 +4,11 @@ product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
 type: Documentation
 role: Developer
+feature: Asset Compute Microservices
 user-guide-title: Handleiding voor asset compute-service
 user-guide-description: Deze documentatie behandelt [!DNL Asset Compute Service] taken zoals hoe te om uw douanecode te ontwikkelen, te beheren, op te stellen en problemen op te lossen.
 breadcrumb-title: Handleiding voor asset compute-service
-source-git-commit: 5257e091730f3672c46dfbe45c3e697a6555e6b1
+source-git-commit: 06016be9b813c28c502f5bd5df87fd42a211e7ac
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 6%
